@@ -1,0 +1,31 @@
+{
+  "name": "product-feedback-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TakuyaMats/product-feedback-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TakuyaMats/product-feedback-app/issues"
+  },
+  "homepage": "https://github.com/TakuyaMats/product-feedback-app#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "node-sass": "^8.0.0",
+    "sequelize": "^6.28.0"
+  }
+}
