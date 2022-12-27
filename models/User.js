@@ -14,7 +14,17 @@ User.init({
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
+    },      
+    firstName: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
+    lastName: {
+        type: DataTypes.STRING,
+    },
+    // photo: { <--------------------------- Image
+    // type: DataTypes.BLOB,
+    // },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
