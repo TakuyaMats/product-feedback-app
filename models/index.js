@@ -1,7 +1,7 @@
 const User = require('./User');
 const Feedback = require('./Feedback');
 const Comment = require('./Comment');
-const Replies = require('./Replies');
+const Reply = require('./Reply');
 
 User.hasMany(Feedback, {
     foreignKey: 'user_id'
@@ -12,7 +12,7 @@ User.hasMany(Comment, {
     onDelete: 'CASCADE'
 });
 
-User.hasMany(Replies, {
+User.hasMany(Reply, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 })
@@ -27,8 +27,8 @@ Comment.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-Comment.hasMany(Replies, {
-    foreignKey: 'replies_id',
+Comment.hasMany(Reply, {
+    foreignKey: 'reply_id',
     onDelete: 'CASCADE'
 })
 
@@ -42,12 +42,12 @@ Feedback.hasMany(Comment, {
     onDelete: 'CASCADE'
 });
 
-Replies.belongsTo(User, {
+Reply.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 
-Replies.belongsTo(Comment, {
+Reply.belongsTo(Comment, {
     foreignKey: 'comment_id',
     onDelete: 'CASCADE'
 });
