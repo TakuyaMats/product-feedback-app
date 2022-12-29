@@ -9,7 +9,7 @@ Reply.init({
         primaryKey: true,
         autoIncrement: true
     },
-    comment: {
+    content: {
         type: DataTypes.STRING,
         validate: {
             len: [3]
