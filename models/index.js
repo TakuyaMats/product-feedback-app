@@ -9,51 +9,52 @@ User.hasMany(Feedback, {
 
 User.hasMany(Comment, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 });
 
 User.hasMany(Reply, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 })
 
 Comment.belongsTo(Feedback, {
     foreignKey: 'feedback_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 });
 
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 });
 
 Comment.hasMany(Reply, {
     foreignKey: 'reply_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 })
 
 Feedback.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 });
 
 Feedback.hasMany(Comment, {
     foreignKey: 'feedback_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 });
 
 Reply.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 });
 
 Reply.belongsTo(Comment, {
     foreignKey: 'comment_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 });
 
 module.exports = {
     User,
     Comment,
-    Feedback
+    Feedback,
+    Reply
 };

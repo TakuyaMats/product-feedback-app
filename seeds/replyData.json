@@ -1,22 +1,22 @@
 [
     {
         "content": "While waiting for dark mode, there are browser extensions that will also do the job. Search for 'dark theme' followed by your browser. There might be a need to turn off the extension for sites with naturally black backgrounds though.",
-        "username": "hummingbird1",
+        "replyingTo": "hummingbird1",
         "user_id": 6
     },
     {
         "content": "Good point! Using any kind of style extension is great and can be highly customizable, like the ability to change contrast and brightness. I'd prefer not to use one of such extensions, however, for security and privacy reasons.",
-        "username": "annev1990",
+        "replyingTo": "annev1990",
         "user_id": 7
     },
     {
         "content": "Bumping this. It would be good to have a tab with a feed of people I follow so it's easy to see what challenges they’ve done lately. I learn a lot by reading good developers",
-        "reply_id": 2,
-        "user_id": 12
+        "replyingTo": "velvetround",
+        "user_id": 1
     },
     {
         "content": "Me too! I'd also love to see celebrations at specific points as well. It would help people take a moment to celebrate their achievements!",
-        "reply_id": 3,
+        "replyingTo": "upbeat1811",
         "user_id": 2
     }
 ]

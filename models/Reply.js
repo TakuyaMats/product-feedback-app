@@ -15,10 +15,10 @@ Reply.init({
             len: [3]
         }
     },
-    comment_id: {
-        type: DataTypes.INTEGER,
+    replyingTo: {
+        type: DataTypes.STRING,
         reference: {
-            model: 'comment',
+            model: 'user',
             key: 'id'
         }
     },

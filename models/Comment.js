@@ -22,6 +22,13 @@ Comment.init({
             key: 'id'
         }
     },
+    username: {
+        type: DataTypes.STRING,
+        reference: {
+            model: 'user',
+            key: 'id'
+        }
+    },
     user_id: {
         type: DataTypes.INTEGER,
         reference: {
