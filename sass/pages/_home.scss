@@ -1,0 +1,16 @@
+.main-sidebar { grid-area: sidebar;};
+.main-category { grid-area: category;};
+.main-roadmap { grid-area: roadmap};
+.main-header { grid-area: header;};
+.main-feedback { grid-area: feedback;};
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'sidebar sidebar header header header header'
+        'sidebar sidebar feedback feedback feedback feedback'
+        'sidebar sidebar feedback feedback feedback feedback';
+    gap: 10px;
+    padding: 10px;
+}
+
