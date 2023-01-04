@@ -34,6 +34,7 @@ app.use(express.urlencoded({
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(__dirname + '/public'));
 
 app.use(routes);
 

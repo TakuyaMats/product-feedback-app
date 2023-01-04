@@ -3,46 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+<link rel="stylesheet" href="/css/style.css">
 
 <title>Frontend Mentor | Product feedback app</title>
 </head>
 <body>
-Frontend Mentor
-Feedback Board
-
-<!-- Sidebar -->
-All
-UI
-UX
-Enhancement
-Bug
-Feature
-
-Roadmap
-View
-
-Planned <!-- Add number here -->
-In-Progress <!-- Add number here -->
-Live <!-- Add number here -->
-
-<!-- Sidebar end -->
-
-<!-- Add number of suggestions here --> Suggestions
-Sort by:
-Most upvotes
-Least upvotes
-Most comments
-Least comments
-
-Add Feedback
-
-<!-- No feedback -->
-There is no feedback yet. Got a suggestion? Found a bug that needs to be squashed? We love 
-hearing about new ideas to improve our app.
-
-Add Feedback
-<!-- No feedback end -->
+    <header class="header p-5">
+        <nav class="display-flex justify-space-around navbar navbar-expand-lg p-2">
+            <div class="container display-flex flex-column justify-space-between">
+                <div class="navbar-nav m-2 pb-2">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                    <button class="no-button" href="/" id="logout">logout</button>
+                    <a class="nav-link" href="/login">Login</a>
+                </div>
+                <h1 class="tech-blog">Frontend Mentor</h1>
+            </div>
+        </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+        {{{body}}}
+    </main>
 </body>
 </html>

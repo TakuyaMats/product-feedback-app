@@ -3,10 +3,10 @@ const { Feedback, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
     Feedback.findAll({
-        attributes: [ 'id', 'title', 'description' ],
+        attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
             include: [{
                 model: Comment,
-                attributes: [ 'id', 'comment', 'feedback_id', 'user_id' ],
+                attributes: [ 'id', 'content', 'feedback_id', 'user_id' ],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -18,12 +18,14 @@ router.get('/', (req, res) => {
             }
         ]
     })
-    .then(blogData => {
-        const blogs = blogData.map(blog => blog.get({ plain: true }));
-        res.render('homepage', { blogs, logged_in: req.session.logged_in });
+    .then(feedbackData => {
+        const feedbacks = feedbackData.map(feedback => feedback.get({ plain: true }));
+        res.render('homepage', { feedbacks, logged_in: req.session.logged_in });
     })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
 });
+
+module.exports = router;
