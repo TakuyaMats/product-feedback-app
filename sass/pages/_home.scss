@@ -1,4 +1,12 @@
-.main-sidebar { grid-area: sidebar;};
+.main-sidebar { 
+    grid-area: sidebar;
+    // margin: auto;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+};
 .main-category { grid-area: category;};
 .main-roadmap { grid-area: roadmap};
 .main-header { grid-area: header;};
@@ -7,9 +15,9 @@
 .grid-container {
     display: grid;
     grid-template-areas:
-        'sidebar sidebar header header header header'
-        'sidebar sidebar feedback feedback feedback feedback'
-        'sidebar sidebar feedback feedback feedback feedback';
+        'sidebar header header header header'
+        'sidebar feedback feedback feedback feedback';
+        // 'sidebar sidebar feedback feedback feedback feedback';
     gap: 10px;
     padding: 10px;
 }

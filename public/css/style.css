@@ -13,22 +13,44 @@ body {
   body h1 {
     font-size: 24px;
     letter-spacing: -0.33px;
-    font-family: 'Jost Bold', sans-serif; }
+    font-weight: bold; }
   body h2 {
     font-size: 20px;
     letter-spacing: -0.25px;
-    font-family: 'Jost Bold', sans-serif; }
+    font-weight: bold; }
   body h3 {
     font-size: 18px;
     letter-spacing: -0.25px;
-    font-family: 'Jost Bold', sans-serif; }
+    font-weight: bold; }
   body h4 {
     font-size: 14px;
     letter-spacing: -0.2px;
-    font-family: 'Jost Bold', sans-serif; }
+    font-weight: bold; }
+
+.main__sidebar-logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 255px;
+  height: 137px;
+  color: #FFFFFF;
+  background-image: linear-gradient(to bottom left, rgba(251, 181, 122, 0.8), #E84D70, #4661E6);
+  border-radius: 10px;
+  text-align: start; }
+  .main__sidebar-logo h2 {
+    margin-top: 62px;
+    margin-left: 24px; }
+  .main__sidebar-logo p {
+    margin-bottom: 24px;
+    margin-left: 24px; }
 
 .main-sidebar {
-  grid-area: sidebar; }
+  grid-area: sidebar;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; }
 
 .main-category {
   grid-area: category; }
@@ -44,6 +66,6 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-areas: 'sidebar sidebar header header header header' 'sidebar sidebar feedback feedback feedback feedback' 'sidebar sidebar feedback feedback feedback feedback';
+  grid-template-areas: 'sidebar header header header header' 'sidebar feedback feedback feedback feedback';
   gap: 10px;
   padding: 10px; }

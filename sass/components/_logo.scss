@@ -1,0 +1,21 @@
+.main__sidebar-logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 255px;
+    height: 137px;
+    color: $color-white;
+    background-image: linear-gradient(to bottom left, rgba($color-gradient-orange, 0.8,), $color-gradient-hex, $color-darker-blue);
+    border-radius: 10px;
+    text-align: start;
+
+    h2 {
+        margin-top: 62px;
+        margin-left: 24px;
+    }
+    
+    p {
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+}
