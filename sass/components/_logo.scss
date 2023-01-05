@@ -5,9 +5,10 @@
     width: 255px;
     height: 137px;
     color: $color-white;
-    background-image: linear-gradient(to bottom left, rgba($color-gradient-orange, 0.8,), $color-gradient-hex, $color-darker-blue);
+    background-image: linear-gradient(to bottom left, rgba($color-gradient-orange, 0.8,), $color-gradient-hex, $color-dark-blue);
     border-radius: 10px;
     text-align: start;
+    margin-bottom: 24px;
 
     h2 {
         margin-top: 62px;

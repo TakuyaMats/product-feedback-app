@@ -6,7 +6,8 @@
   box-sizing: inherit; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #F2F2F2; }
 
 body {
   font-family: 'Jost', sans-serif; }
@@ -36,13 +37,39 @@ body {
   color: #FFFFFF;
   background-image: linear-gradient(to bottom left, rgba(251, 181, 122, 0.8), #E84D70, #4661E6);
   border-radius: 10px;
-  text-align: start; }
+  text-align: start;
+  margin-bottom: 24px; }
   .main__sidebar-logo h2 {
     margin-top: 62px;
     margin-left: 24px; }
   .main__sidebar-logo p {
     margin-bottom: 24px;
     margin-left: 24px; }
+
+.main__sidebar-category {
+  text-align: start;
+  width: 255px;
+  background-color: #FFFFFF;
+  border-radius: 10px; }
+  .main__sidebar-category button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #F2F4FF;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #4661E6;
+    margin-left: 24px;
+    margin-bottom: 24px; }
+    .main__sidebar-category button:hover {
+      background-color: #CFD7FF; }
+    .main__sidebar-category button:active {
+      color: #FFFFFF;
+      background-color: #4661E6;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .main__sidebar-category .category-all, .main__sidebar-category .category-ui, .main__sidebar-category .category-ux {
+    margin-top: 24px; }
 
 .main-sidebar {
   grid-area: sidebar;
