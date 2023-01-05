@@ -50,7 +50,8 @@ body {
   text-align: start;
   width: 255px;
   background-color: #FFFFFF;
-  border-radius: 10px; }
+  border-radius: 10px;
+  margin-bottom: 24px; }
   .main__sidebar-category button {
     display: inline-block;
     text-decoration: none;
@@ -70,6 +71,27 @@ body {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .main__sidebar-category .category-all, .main__sidebar-category .category-ui, .main__sidebar-category .category-ux {
     margin-top: 24px; }
+
+.main__sidebar-roadmap {
+  width: 255px;
+  background-color: #FFFFFF;
+  border-radius: 10px; }
+  .main__sidebar-roadmap li::marker {
+    width: 0;
+    margin-left: 12px; }
+  .main__sidebar-roadmap .roadmap__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 24px; }
+  .main__sidebar-roadmap .roadmap__bulletin {
+    text-align: start;
+    margin-left: 24px;
+    margin-bottom: 24px; }
+    .main__sidebar-roadmap .roadmap__bulletin ul {
+      list-style-position: inside; }
 
 .main-sidebar {
   grid-area: sidebar;
