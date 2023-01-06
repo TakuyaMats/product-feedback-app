@@ -48,18 +48,22 @@
             </div>
         </div>
         <div class="main-header">
-            <img src="/css/suggestions/icon-suggestions.svg" alt="light-bulb">
-            <h3>6 Suggestions</h3>
-            <form action="/action_page.php">
-            <label for="feedback-filter">Sort by:</label>
-            <select name="feedback-filter" class="feedback-filter">
-                <option value="most Upvotes">Most Upvotes</option>
-                <option value="least upvotes">Least Upvotes</option>
-                <option value="most comments">Most Comments</option>
-                <option value="least comments">Least Comments</option>
-            </select>
-            <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up">
-            </form>
+            <div class="header-container">
+                <img src="/css/suggestions/icon-suggestions.svg" alt="light-bulb" class="light-bulb">
+                <h3>6 Suggestions</h3>
+                <form action="/action_page.php">
+                <label for="feedback-filter">Sort by:</label>
+                <select name="feedback-filter" class="feedback-filter">
+                    <option value="most upvotes">Most Upvotes 
+                        <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up">
+                    </option>
+                    <option value="least upvotes">Least Upvotes</option>
+                    <option value="most comments">Most Comments</option>
+                    <option value="least comments">Least Comments</option>
+                </select>
+                {{!-- <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up"> --}}
+                </form>
+            </div>
             <button class="add-feedback">+ Add Feedback</button>
         </div>
         <div class="main-feedback">

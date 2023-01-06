@@ -7,7 +7,7 @@
 
 body {
   box-sizing: border-box;
-  background-color: #F2F2F2; }
+  background-color: #FFFDD0; }
 
 body {
   font-family: 'Jost', sans-serif; }
@@ -110,21 +110,23 @@ body {
 
 .main-header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   background-color: #373F68;
   height: 72px;
   border-radius: 10px;
   color: #F2F4FF;
-  gap: 1em;
-  font-size: 14px; }
-  .main-header img {
-    width: 23px;
-    height: 24px;
-    margin-left: 24px; }
-  .main-header label {
-    margin-left: 34px;
-    opacity: 0.75; }
+  font-size: 14px;
+  gap: 10px; }
+  .main-header .header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em; }
+    .main-header .header-container .light-bulb {
+      margin-left: 24px; }
+    .main-header .header-container label {
+      opacity: 0.75; }
   .main-header .feedback-filter {
     -webkit-appearance: none;
     background-color: #373F68;
@@ -132,7 +134,7 @@ body {
     border: none;
     opacity: 0.75;
     margin: 0;
-    width: 85px; }
+    width: 8em; }
   .main-header .arrow-up {
     width: 10px;
     height: 6px;
@@ -147,7 +149,8 @@ body {
     height: 44px;
     border-radius: 10px;
     font-size: 14px;
-    font-weight: 700; }
+    font-weight: 700;
+    margin-right: 16px; }
 
 .main-sidebar {
   grid-area: sidebar;
@@ -173,4 +176,5 @@ body {
   display: grid;
   grid-template-areas: 'sidebar header header header header' 'sidebar feedback feedback feedback feedback';
   gap: 10px;
-  padding: 10px; }
+  padding: 10px;
+  padding-top: 40px; }
