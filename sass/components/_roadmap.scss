@@ -26,4 +26,29 @@
             list-style-position: inside;
         }
     }
+
+    .container-planned, .container-in-progress, .container-live {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 24px;
+
+        div {
+            font-weight: bold;
+        }
+    }
+
+    .planned::marker {
+        color: $color-orange;
+        width: 8px;
+    }
+    
+    .in-progress::marker {
+        color: $color-purple;
+        width: 8px;
+    }
+
+    .live::marker {
+        color: $color-light-blue;
+        width: 8px;
+    }
 }

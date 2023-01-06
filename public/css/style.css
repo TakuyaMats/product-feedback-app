@@ -92,6 +92,21 @@ body {
     margin-bottom: 24px; }
     .main__sidebar-roadmap .roadmap__bulletin ul {
       list-style-position: inside; }
+  .main__sidebar-roadmap .container-planned, .main__sidebar-roadmap .container-in-progress, .main__sidebar-roadmap .container-live {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 24px; }
+    .main__sidebar-roadmap .container-planned div, .main__sidebar-roadmap .container-in-progress div, .main__sidebar-roadmap .container-live div {
+      font-weight: bold; }
+  .main__sidebar-roadmap .planned::marker {
+    color: #F49F75;
+    width: 8px; }
+  .main__sidebar-roadmap .in-progress::marker {
+    color: #AD1FEA;
+    width: 8px; }
+  .main__sidebar-roadmap .live::marker {
+    color: #628CFA;
+    width: 8px; }
 
 .main-sidebar {
   grid-area: sidebar;
