@@ -1,0 +1,51 @@
+.main-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $color-header-blue;
+    height: 72px;
+    border-radius: 10px;
+    color: $color-grey;
+    gap: 1em;
+    font-size: 14px;
+
+    img {
+        width: 23px;
+        height: 24px;
+        margin-left: 24px;
+    }
+
+    label {
+        margin-left: 34px;
+        opacity: 0.75;
+    }
+
+    .feedback-filter {
+        -webkit-appearance: none;
+        background-color: $color-header-blue;
+        color: $color-grey;
+        border: none;
+        opacity: 0.75;
+        margin: 0;
+        width: 85px;
+    }
+
+    .arrow-up {
+        width: 10px;
+        height: 6px;
+        color: $color-white;
+        margin: 0;
+    }
+
+    .add-feedback {
+        display: inline-block;
+        text-decoration: none;
+        background-color: $color-add-feedback-purple;
+        color: $color-white-text;
+        width: 158px;
+        height: 44px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
