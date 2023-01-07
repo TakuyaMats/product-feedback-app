@@ -1,12 +1,17 @@
-<div class="card">
-    <div class="card-header">
-        {{!-- <a href="/feedback/{{id}}">{{title}}</a> --}}
-        <h3>{{title}}</h3>
-        <button>{{upvotes}}</button>
-        <p>{{description}}</p>
-        <button>{{status}}</button>
+<div class="card-feedback">
+    <div class="card-feedback-container">
+        <button class="feedback-upvotes">
+            <img src="/css/shared/icon-arrow-up.svg">
+            {{upvotes}}
+        </button>
+        <div class="feedback-body">
+            <a class="feedback-title" href="/feedback/{{id}}"><h3>{{title}}</h3></a>
+            <p class="feedback-description">{{description}}</p>
+            <button class="feedback-status">{{category}}</button>
+        </div>
     </div>
-    <div class="card-body">
-        <p class="card-text">{{content}}</p>
-    </div>
+    <button class="card-feedback-content">
+        <img src="/css/shared/icon-comments.svg">
+        <p>0</p>
+    </button>
 </div>

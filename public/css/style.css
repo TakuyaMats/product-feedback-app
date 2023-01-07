@@ -152,6 +152,57 @@ body {
     font-weight: 700;
     margin-right: 16px; }
 
+.card-feedback {
+  height: 151px;
+  background-color: #FFFFFF;
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .card-feedback .card-feedback-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    height: 151px; }
+  .card-feedback .feedback-upvotes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    color: #3A4374;
+    margin-left: 32px;
+    margin-right: 40px; }
+    .card-feedback .feedback-upvotes img {
+      margin-bottom: 1em; }
+  .card-feedback .feedback-body a, .card-feedback .feedback-body p, .card-feedback .feedback-body button {
+    margin: 5px auto;
+    text-decoration: none; }
+  .card-feedback .feedback-body a {
+    color: #3A4374; }
+  .card-feedback .feedback-body p {
+    color: #647196; }
+  .card-feedback .feedback-body button {
+    text-decoration: none;
+    width: 111px;
+    height: 30px;
+    border: none;
+    color: #4661E6;
+    font-weight: 600;
+    text-transform: capitalize; }
+  .card-feedback .card-feedback-content {
+    display: flex;
+    height: 23px;
+    border: none;
+    margin-right: 32px;
+    font-weight: 700; }
+    .card-feedback .card-feedback-content img {
+      margin-right: 12px; }
+
 .main-sidebar {
   grid-area: sidebar;
   display: flex;
