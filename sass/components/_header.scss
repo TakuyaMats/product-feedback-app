@@ -44,7 +44,7 @@
     .add-feedback {
         display: inline-block;
         text-decoration: none;
-        background-color: $color-add-feedback-purple;
+        background-color: $color-purple;
         color: $color-white-text;
         width: 158px;
         height: 44px;
@@ -52,6 +52,11 @@
         font-size: 14px;
         font-weight: 700;
         margin-right: 16px;
+        border: none;
+
+        &:active {
+            background-color: $color-add-feedback-purple;
+        }
     }
 }
 
