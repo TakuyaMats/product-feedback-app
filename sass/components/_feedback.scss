@@ -26,6 +26,16 @@
         color: $color-darkest-blue;
         margin-left: 32px;
         margin-right: 40px;
+        width: 40px;
+        height: 53px;
+        border-radius: 10px;
+        background-color: $color-grey;
+
+        &:active {
+            color: $color-white;
+            background-color: $color-dark-blue;
+            box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        }
 
         img {
             margin-bottom: 1em;
@@ -51,10 +61,13 @@
             text-decoration: none;
             width: 111px;
             height: 30px;
+            font-size: 13px;
             border: none;
             color: $color-dark-blue;
             font-weight: 600;
             text-transform: capitalize;
+            background-color: $color-grey;
+            border-radius: 10px;
         }
     }
 
@@ -64,6 +77,7 @@
         border: none;
         margin-right: 32px;
         font-weight: 700;
+        background-color: $color-white;
 
         img {
             margin-right: 12px;

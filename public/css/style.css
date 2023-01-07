@@ -176,7 +176,15 @@ body {
     font-size: 13px;
     color: #3A4374;
     margin-left: 32px;
-    margin-right: 40px; }
+    margin-right: 40px;
+    width: 40px;
+    height: 53px;
+    border-radius: 10px;
+    background-color: #F2F4FF; }
+    .card-feedback .feedback-upvotes:active {
+      color: #FFFFFF;
+      background-color: #4661E6;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
     .card-feedback .feedback-upvotes img {
       margin-bottom: 1em; }
   .card-feedback .feedback-body a, .card-feedback .feedback-body p, .card-feedback .feedback-body button {
@@ -190,16 +198,20 @@ body {
     text-decoration: none;
     width: 111px;
     height: 30px;
+    font-size: 13px;
     border: none;
     color: #4661E6;
     font-weight: 600;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    background-color: #F2F4FF;
+    border-radius: 10px; }
   .card-feedback .card-feedback-content {
     display: flex;
     height: 23px;
     border: none;
     margin-right: 32px;
-    font-weight: 700; }
+    font-weight: 700;
+    background-color: #FFFFFF; }
     .card-feedback .card-feedback-content img {
       margin-right: 12px; }
 
