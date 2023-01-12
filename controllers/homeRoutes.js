@@ -28,4 +28,38 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/feedback/:id', (req, res) => {
+    Feedback.findOne({
+            where: {
+                id: req.params.id
+            },
+            attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
+            include: [{
+                    model: Comment,
+                    attributes: [ 'id', 'content', 'feedback_id', 'user_id' ],
+                    include: {
+                        model: User,
+                        attributes: ['username', 'name']
+                    }
+                },
+                {
+                    model: User,
+                    attributes: ['username', 'name']
+                }
+            ]
+        })
+        .then(feedbackData => {
+            if (!feedbackData) {
+                res.status(404).json({ message: 'No post found with this id' });
+                return;
+            }
+            const feedback = feedbackData.get({ plain: true });
+            res.render('single-feedback', { feedback, logged_in: req.session.logged_in });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
 module.exports = router;
