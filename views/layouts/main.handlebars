@@ -8,67 +8,7 @@
 <link rel="stylesheet" href="/css/style.css">
 
 <title>Frontend Mentor | Product feedback app</title>
-</head>
 <body>
-    <div class="grid-container">
-        <div class="main-sidebar">
-            <div class="main__sidebar-logo">
-                <h2>Frontend Mentor</h2>
-                <p>Feedback Board</p>
-            </div>
-            <div class="main__sidebar-category">
-                <button class="category-all">All</button>
-                <button class="category-ui">UI</button>
-                <button class="category-ux">UX</button>
-                <button class="category-enhancement">Enhancement</button>
-                <button class="category-bug">Bug</button>
-                <button class="category-feature">Feature</button>
-            </div>
-            <div class="main__sidebar-roadmap">
-                <div class="roadmap__header">
-                    <h3>Roadmap</h3>
-                    <a class="roadmap__header-link" href="/roadmap">View</a>
-                </div>
-                <div class="roadmap__bulletin">
-                    <ul class="bulletin-container">
-                        <div class="container-planned">
-                            <li class="planned">Planned</li>
-                            <div>0</div>
-                        </div>
-                        <div class="container-in-progress">
-                            <li class="in-progress">In-Progress</li>
-                            <div>0</div>
-                        </div>
-                        <div class="container-live">
-                            <li class="live">Live</li>
-                            <div>0</div>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="main-header">
-            <div class="header-container">
-                <img src="/css/suggestions/icon-suggestions.svg" alt="light-bulb" class="light-bulb">
-                <h3>0 Suggestions</h3>
-                <form action="/action_page.php">
-                <label for="feedback-filter">Sort by:</label>
-                <select name="feedback-filter" class="feedback-filter">
-                    <option value="most upvotes">Most Upvotes 
-                        <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up">
-                    </option>
-                    <option value="least upvotes">Least Upvotes</option>
-                    <option value="most comments">Most Comments</option>
-                    <option value="least comments">Least Comments</option>
-                </select>
-                {{!-- <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up"> --}}
-                </form>
-            </div>
-            <button class="add-feedback">+ Add Feedback</button>
-        </div>
-        <div class="main-feedback"> 
-            {{{body}}}
-        </div>
-    </div>
+    {{{body}}}
 </body>
 </html>
