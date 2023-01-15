@@ -28,6 +28,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// reverse? include model Reply and include Comment?
 router.get('/feedback/:id', (req, res) => {
     Feedback.findOne({
             where: {
@@ -36,17 +37,25 @@ router.get('/feedback/:id', (req, res) => {
             attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
             include: [{
                     model: Comment,
-                    attributes: [ 'id', 'content', 'feedback_id', 'user_id' ],
+                    attributes: [ 'id', 'content', 'feedback_id', 'user_id', 'reply_id' ],
                     include: {
                         model: User,
-                        attributes: ['username', 'name']
-                    }
+                        attributes: ['username', 'name', 'photo'],
+                    // },{
+                    //     model: Reply,
+                    //     attributes: ['content', 'replyingTo'],
+                    // }]
+                }
                 },
                 {
                     model: User,
-                    attributes: ['username', 'name']
+                    attributes: ['username', 'name', 'photo'],
                 }
-            ]
+                // {
+                //     model: Reply,
+                //     attributes: ['content', 'replyingTo'],
+                // }
+    ]
         })
         .then(feedbackData => {
             if (!feedbackData) {

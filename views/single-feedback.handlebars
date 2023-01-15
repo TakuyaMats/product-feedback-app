@@ -1,16 +1,22 @@
-{{> feedback-info feedback}}
+<div class="feedback-detail-container">
+    <div class="detail-header">
+            <button class="detail-back-btn">Go Back</button>
+            <button class="detail-edit-feedback-btn">Edit Feedback</button>
+    </div>
+        {{> feedback-info feedback}}
+    <div class="detail-comment-section">
+        {{> comments feedback.comments}}
+    </div>
+    <div class="card">
+        <h3 class="card-header"></h3>
+        <form class="card-body comment-form" id="comment-form">
 
-{{> comments feedback.comments}}
+            <label class="form-label">Add Comment</label>
+            <input id="comment" name="comment-body" class="form-input" />
 
-<div class="card">
-    <h3 class="card-header"></h3>
-    <form class="card-body comment-form" id="comment-form">
-
-        <label class="form-label">Add Comment</label>
-        <input id="comment" name="comment-body" class="form-input" />
-
-        <button type="submit" class="btn">Post Comment</button>
-    </form>
+            <button type="submit" class="btn">Post Comment</button>
+        </form>
+    </div>
 </div>
 
 <script src="/js/comment.js"></script>

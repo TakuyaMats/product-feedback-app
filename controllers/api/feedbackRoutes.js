@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Feedback, Comment, User } = require('../../models');
+const { Feedback, Comment, User, Reply } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
@@ -14,11 +14,14 @@ router.get('/', (req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['id', 'comment', 'feedback_id', 'user_id'],
-                    include: {
+                    attributes: ['id', 'comment', 'feedback_id', 'user_id', 'reply_id'],
+                    include: [{
                         model: User,
-                        attributes: ['username', 'name']
-                    }
+                        attributes: ['username', 'name'],
+                    },{
+                        model: Reply,
+                        attributes: ['content', 'replyingTo']
+                    }]
                 }
             ]
         })
@@ -42,11 +45,14 @@ router.get('/:id', (req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['id', 'content', 'feedback_id', 'user_id'],
-                    include: {
+                    attributes: ['id', 'content', 'feedback_id', 'user_id', 'reply_id'],
+                    include: [{
                         model: User,
-                        attributes: ['username', 'name', 'email']
-                    }
+                        attributes: ['username', 'name', 'email'],
+                    },{
+                        model: Reply,
+                        attributes: ['content', 'replyingTo']
+                    }]
                 }
             ]
         })

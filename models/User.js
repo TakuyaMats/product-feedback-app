@@ -19,9 +19,10 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    // photo: { <--------------------------- Image
-    // type: DataTypes.BLOB,
-    // },
+    photo: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
