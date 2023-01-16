@@ -1,20 +1,29 @@
 <div class="feedback-detail-container">
     <div class="detail-header">
-            <button class="detail-back-btn">Go Back</button>
-            <button class="detail-edit-feedback-btn">Edit Feedback</button>
+        <form class="detail-btn">
+            <div class="back-container">
+                <img src="/css/shared/icon-arrow-left.svg">
+                <input class="detail-back-btn" type="button" value="Go Back" onclick="history.back()">
+            </div>
+            <input class="detail-edit-btn" type="button" value="Edit Feedback">
+        </form>
     </div>
+    <div class="detail-feedback">
         {{> feedback-info feedback}}
+    </div>
     <div class="detail-comment-section">
         {{> comments feedback.comments}}
     </div>
-    <div class="card">
-        <h3 class="card-header"></h3>
-        <form class="card-body comment-form" id="comment-form">
-
-            <label class="form-label">Add Comment</label>
-            <input id="comment" name="comment-body" class="form-input" />
-
-            <button type="submit" class="btn">Post Comment</button>
+    <div class="detail-feedback-card">
+        <form class="feedback-card-body comment-form" id="comment-form">
+            <label class="form-label">
+                <h3>Add Comment</h3>
+            </label>
+            <input id="comment" name="comment-body" class="form-input" type="text" placeholder="Type your comment here"/>
+            <div class="comment-footer">
+                <p class="characters-left">250 Characters left</p>
+                <button type="submit" class="btn">Post Comment</button>
+            </div>
         </form>
     </div>
 </div>

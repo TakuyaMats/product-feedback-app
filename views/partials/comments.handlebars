@@ -1,19 +1,19 @@
-<div class="comments">
-    <h3>2 Comments</h3>
+<div class="comments-container">
+    <h3 class="comments-header">2 Comments</h3>
     {{#each this}}
-    <div class="card">
-        <section class="comment card-body">
-            <img src={{user.photo}}>
-            <div>
-                {{user.name}}
+    <div class="comments-card">
+        <section class="comments-card-body">
+            <img class="comments-profile-picture" src={{user.photo}}>
+            <div class="comments-section">
+                <div class="section-header">
+                    <h4 class="name">{{user.name}}</h4>
+                    <p class="username">@{{user.username}}</p>
+                </div>
+                <p class="comments-content">{{content}}</p>
             </div>
-            <div class="meta">
-                @{{user.username}}
-            </div>
-            <div class="text">
-                {{content}}
-            </div>
+            <button class="reply">Reply</button>
         </section>
+        <hr>
     </div>
     {{/each}}
 </div>

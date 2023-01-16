@@ -1,0 +1,134 @@
+// .detail-feedback-card { grid-area: feedback-card};
+// .detail-comment-section { grid-area: comment-section};
+// .detail-header { grid-area: header;};
+.detail-feedback { grid-area: feedback;};
+
+.feedback-detail-container {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+        'header'
+        'feedback'
+        'comment-section'
+        'feedback-card';
+    gap: 25px;
+    padding: 10px;
+    padding-top: 40px;
+}
+
+.detail-header {
+    grid-area: header;
+    width: 730px;
+    height: 44px;
+
+    .detail-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .back-container {
+            width: 76px;
+
+            img {
+                margin-right: 5px;
+            }
+
+            input {
+                text-decoration: none;
+                border: none;
+                background-color: $color-cream;
+                font-weight: 700;
+                font-size: 14px;
+
+                &:active {
+                    text-decoration: underline;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .detail-edit-btn {
+            text-decoration: none;
+            background-color: $color-dark-blue;
+            color: $color-white-text;
+            width: 142px;
+            height: 44px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 16px;
+            border: none;
+
+            &:active {
+                background-color: $color-edit-blue;
+            }
+        }
+    }
+}
+
+.detail-comment-section {
+    grid-area: comment-section;
+    display: flex;
+    justify-content: center;
+    background-color: $color-white;
+    border-radius: 10px;
+    width: 730px;
+}
+
+.detail-feedback-card {
+    grid-area: feedback-card;
+    display: flex;
+    justify-content: start;
+    background-color: $color-white;
+    border-radius: 10px;
+    width: 730px;
+    
+    form {
+        margin: 2em;
+
+        label {
+            h3 {
+                margin-bottom: 1em;
+            }
+        }
+
+        input {
+            width: 664px;
+            height: 80px;
+            background-color: $color-off-white;
+            border-radius: 5px;
+            border: none;
+            text-indent: 20px;
+            margin-bottom: 27px;
+        }
+
+        .comment-footer {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-weight: 400;
+                font-size: 15px;
+                color: $color-dark-grey;
+            }
+
+            button {
+                width: 142px;
+                height: 44px;
+                background-color: $color-purple;
+                color: $color-grey;
+                border-radius: 10px;
+                border: none;
+                font-weight: 700;
+                font-size: 14px;
+
+                &:active {
+                    background-color: $color-add-feedback-purple;
+                }
+            }
+        }
+    }
+}
