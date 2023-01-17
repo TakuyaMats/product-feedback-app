@@ -72,6 +72,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
     Feedback.create({
             title: req.body.title,
+            category: req.body.category,
             description: req.body.description,
             user_id: req.session.user_id
         })

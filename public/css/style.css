@@ -142,9 +142,7 @@ body {
     margin: 0; }
   .main-header .add-feedback {
     display: inline-block;
-    text-decoration: none;
     background-color: #AD1FEA;
-    color: #F2F4FE;
     width: 158px;
     height: 44px;
     border-radius: 10px;
@@ -152,6 +150,9 @@ body {
     font-weight: 700;
     margin-right: 16px;
     border: none; }
+    .main-header .add-feedback a {
+      text-decoration: none;
+      color: #F2F4FE; }
     .main-header .add-feedback:active {
       background-color: #C75AF6; }
 
