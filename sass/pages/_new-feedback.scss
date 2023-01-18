@@ -1,0 +1,178 @@
+.new-feedback-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .new-feedback-header {
+        width: 540px;
+        height: 44px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        .feedback-btn {
+            .back-container {
+                width: 76px;
+            
+                img {
+                    margin-right: 5px;
+                }
+            
+                input {
+                    text-decoration: none;
+                    border: none;
+                    background-color: $color-cream;
+                    font-weight: 700;
+                    font-size: 14px;
+            
+                    &:active {
+                        text-decoration: underline;
+                    }
+            
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .new-feedback-card {
+        background-color: $color-white;
+        width: 540px;
+        height: 685px;
+        border-radius: 10px;
+
+        .card-container {
+            margin: 25px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .img-container {
+            position: relative;
+            transform: translateY(-90%);
+            background-image: linear-gradient(to bottom left, rgba($color-gradient-hex, 0,), rgba($color-gradient-purple, 53.09), rgba($color-gradient-light-blue, 100));
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            text-align: center;
+
+            img {
+                position: absolute;
+                top: 34%;
+                left: 34%;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .title-container {
+            width: 456px;
+            height: 106px;
+            margin-bottom: 24px;
+
+            label {
+                
+                p {
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                }
+            }
+
+            input {
+                width: 456px;
+                height: 48px;
+                background-color: $color-off-white;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+
+        .category-container {
+            width: 456px;
+            height: 106px;
+            margin-bottom: 24px;
+
+            label {
+                
+                p {
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                }
+            }
+
+            select {
+                width: 456px;
+                height: 48px;
+                background-color: $color-off-white;
+                border: none;
+                border-radius: 10px;
+                text-indent: 5%;
+                appearance: none;
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: right 1rem center;
+                background-size: 1em;
+            }
+        }
+
+        .detail-container {
+            width: 456px;
+            height: 154px;
+            margin-bottom: 24px;
+
+            label {
+                
+                p {
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                }
+            }
+
+            input {
+                width: 456px;
+                height: 96px;
+                background-color: $color-off-white;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+
+        .detail-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1em;
+
+            input {
+                width: 93px;
+                height: 44px;
+                background-color: $color-darkest-blue;
+                color: $color-cancel-white;
+                border: none;
+                border-radius: 10px;
+
+                &:active {
+                    background-color: $color-cancel-grey;
+                }
+            }
+
+            button {
+                width: 144px;
+                height: 44px;
+                background-color: $color-purple;
+                color: $color-cancel-white;
+                border: none;
+                border-radius: 10px;
+
+                &:active {
+                    background-color: $color-add-feedback-purple;
+                }
+            }
+        }
+    }
+}
+
+

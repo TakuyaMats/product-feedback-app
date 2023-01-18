@@ -6,8 +6,47 @@
                 <input class="detail-back-btn" type="button" value="Go Back" onclick="history.back()">
             </div>
         </form>
+    </div>
     <div class="new-feedback-card">
-        <img src="/css/shared/icon-plus.svg">
+        <div class="card-container">
+            <div class="img-container">
+                <img src="/css/shared/icon-plus.svg">
+            </div>
+            <h1>Create New Feedback</h1>
+            <form class="card-body new-feedback-form" id="new-feedback-form">
+                <div class="title-container">
+                    <label for="feedback-title" class="form-label">
+                        <h4>Feedback Title</h4>
+                        <p>Add a short, descriptive headline</p>
+                    </label>
+                    <input type="text" id="feedback-title" name="feedback-title" class="form-input-title"/>
+                </div>
+                <div class="category-container">
+                    <label for="category">
+                        <h4>Category</h4>
+                        <p>Choose a category for your feedback</p>
+                    </label>
+                    <select id="category" name="category">
+                        <option value="UI">UI</option>
+                        <option value="UX">UX</option>
+                        <option value="Enhancement">Enhancement</option>
+                        <option value="Bug">Bug</option>
+                        <option value="Feature">Feature</option>
+                    </select>
+                </div>
+                <div class="detail-container">
+                    <label for="detail">
+                        <h4>Feedback Detail</h4>
+                        <p>Include any specific comments on what should be improved, added, etc.</p>
+                    </label>
+                    <input type="text" id="feedback-detail" name="feedback-detail" class="form-input-detail"/>
+                </div>
+                <div class="detail-footer">
+                    <input class="detail-btn" type="button" value="Cancel" onclick="history.back()">
+                    <button type="submit" class="detail-add-btn">Add Feedback</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
