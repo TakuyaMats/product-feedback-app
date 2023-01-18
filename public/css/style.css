@@ -238,13 +238,13 @@ body {
       margin-bottom: 2em; }
     .comments-container .comments-card .comments-card-body {
       display: flex;
-      justify-content: space-between;
       gap: 2em; }
       .comments-container .comments-card .comments-card-body img {
         width: 40px;
         height: 40px;
         border-radius: 50%; }
       .comments-container .comments-card .comments-card-body button {
+        align-items: end;
         text-decoration: none;
         background-color: #FFFFFF;
         color: #4661E6;
@@ -256,17 +256,19 @@ body {
         border: none; }
         .comments-container .comments-card .comments-card-body button:hover {
           text-decoration: underline; }
-      .comments-container .comments-card .comments-card-body .comments-section p {
-        margin-bottom: 2em; }
-      .comments-container .comments-card .comments-card-body .comments-section .section-header p {
-        margin-bottom: 15px;
-        color: #647196;
-        font-size: 14px;
-        line-height: 20px;
-        margin-top: 2px;
-        font-weight: 400; }
-      .comments-container .comments-card .comments-card-body .comments-section .comments-content {
-        font-size: 15px; }
+      .comments-container .comments-card .comments-card-body .comments-section {
+        width: 594px; }
+        .comments-container .comments-card .comments-card-body .comments-section p {
+          margin-bottom: 2em; }
+        .comments-container .comments-card .comments-card-body .comments-section .section-header p {
+          margin-bottom: 15px;
+          color: #647196;
+          font-size: 14px;
+          line-height: 20px;
+          margin-top: 2px;
+          font-weight: 400; }
+        .comments-container .comments-card .comments-card-body .comments-section .comments-content {
+          font-size: 15px; }
 
 .main-sidebar {
   grid-area: sidebar;
