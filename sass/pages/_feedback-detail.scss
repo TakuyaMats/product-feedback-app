@@ -51,16 +51,19 @@
         }
 
         .detail-edit-btn {
-            text-decoration: none;
             background-color: $color-dark-blue;
-            color: $color-white-text;
             width: 142px;
             height: 44px;
             border-radius: 10px;
-            font-size: 14px;
-            font-weight: 700;
             margin-right: 16px;
-            border: none;
+
+            a {
+                color: $color-white-text;
+                font-size: 14px;
+                font-weight: 700;
+                border: none;
+                text-decoration: none;
+            }
 
             &:active {
                 background-color: $color-edit-blue;

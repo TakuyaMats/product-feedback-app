@@ -331,16 +331,17 @@ body {
         .detail-header .detail-btn .back-container input:hover {
           text-decoration: underline; }
     .detail-header .detail-btn .detail-edit-btn {
-      text-decoration: none;
       background-color: #4661E6;
-      color: #F2F4FE;
       width: 142px;
       height: 44px;
       border-radius: 10px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-right: 16px;
-      border: none; }
+      margin-right: 16px; }
+      .detail-header .detail-btn .detail-edit-btn a {
+        color: #F2F4FE;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        text-decoration: none; }
       .detail-header .detail-btn .detail-edit-btn:active {
         background-color: #7C91F9; }
 
@@ -449,7 +450,8 @@ body {
         height: 48px;
         background-color: #F7F8FD;
         border: none;
-        border-radius: 10px; }
+        border-radius: 10px;
+        text-indent: 5%; }
     .new-feedback-container .new-feedback-card .category-container {
       width: 456px;
       height: 106px;
@@ -481,7 +483,8 @@ body {
         height: 96px;
         background-color: #F7F8FD;
         border: none;
-        border-radius: 10px; }
+        border-radius: 10px;
+        text-indent: 5%; }
     .new-feedback-container .new-feedback-card .detail-footer {
       display: flex;
       justify-content: flex-end;
@@ -503,4 +506,143 @@ body {
         border: none;
         border-radius: 10px; }
         .new-feedback-container .new-feedback-card .detail-footer button:active {
+          background-color: #C75AF6; }
+
+.edit-feedback-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .edit-feedback-container .edit-feedback-header {
+    width: 540px;
+    height: 44px;
+    margin-top: 40px;
+    margin-bottom: 40px; }
+    .edit-feedback-container .edit-feedback-header .edit-feedback-btn .back-container {
+      width: 76px; }
+      .edit-feedback-container .edit-feedback-header .edit-feedback-btn .back-container img {
+        margin-right: 5px; }
+      .edit-feedback-container .edit-feedback-header .edit-feedback-btn .back-container input {
+        text-decoration: none;
+        border: none;
+        background-color: #FFFDD0;
+        font-weight: 700;
+        font-size: 14px; }
+        .edit-feedback-container .edit-feedback-header .edit-feedback-btn .back-container input:active {
+          text-decoration: underline; }
+        .edit-feedback-container .edit-feedback-header .edit-feedback-btn .back-container input:hover {
+          text-decoration: underline; }
+  .edit-feedback-container .edit-feedback-card {
+    background-color: #FFFFFF;
+    width: 540px;
+    height: 822px;
+    border-radius: 10px; }
+    .edit-feedback-container .edit-feedback-card .card-container {
+      margin: 25px; }
+    .edit-feedback-container .edit-feedback-card h1 {
+      margin-bottom: 40px; }
+    .edit-feedback-container .edit-feedback-card img {
+      position: relative;
+      transform: translateY(-90%);
+      margin-left: 5%;
+      width: 56px;
+      height: 56px; }
+    .edit-feedback-container .edit-feedback-card .title-container {
+      width: 456px;
+      height: 106px;
+      margin-bottom: 24px; }
+      .edit-feedback-container .edit-feedback-card .title-container label p {
+        margin-bottom: 8px;
+        font-size: 14px; }
+      .edit-feedback-container .edit-feedback-card .title-container input {
+        width: 456px;
+        height: 48px;
+        background-color: #F7F8FD;
+        border: none;
+        border-radius: 10px;
+        text-indent: 5%; }
+    .edit-feedback-container .edit-feedback-card .category-container {
+      width: 456px;
+      height: 106px;
+      margin-bottom: 24px; }
+      .edit-feedback-container .edit-feedback-card .category-container label p {
+        margin-bottom: 8px;
+        font-size: 14px; }
+      .edit-feedback-container .edit-feedback-card .category-container select {
+        width: 456px;
+        height: 48px;
+        background-color: #F7F8FD;
+        border: none;
+        border-radius: 10px;
+        text-indent: 5%;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1em; }
+    .edit-feedback-container .edit-feedback-card .status-container {
+      width: 456px;
+      height: 106px;
+      margin-bottom: 24px; }
+      .edit-feedback-container .edit-feedback-card .status-container label p {
+        margin-bottom: 8px;
+        font-size: 14px; }
+      .edit-feedback-container .edit-feedback-card .status-container select {
+        width: 456px;
+        height: 48px;
+        background-color: #F7F8FD;
+        border: none;
+        border-radius: 10px;
+        text-indent: 5%;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1em; }
+    .edit-feedback-container .edit-feedback-card .detail-container {
+      width: 456px;
+      height: 154px;
+      margin-bottom: 24px; }
+      .edit-feedback-container .edit-feedback-card .detail-container label p {
+        margin-bottom: 8px;
+        font-size: 14px; }
+      .edit-feedback-container .edit-feedback-card .detail-container input {
+        width: 456px;
+        height: 96px;
+        background-color: #F7F8FD;
+        border: none;
+        border-radius: 10px;
+        text-indent: 5%; }
+    .edit-feedback-container .edit-feedback-card .edit-feedback-footer {
+      gap: 1em; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer input:nth-of-type(1) {
+        margin-left: 8em; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer button:nth-of-type(2) {
+        margin-left: 1em; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer .delete-btn {
+        width: 93px;
+        height: 44px;
+        background-color: #D73737;
+        color: #F2F4FE;
+        border: none;
+        border-radius: 10px; }
+        .edit-feedback-container .edit-feedback-card .edit-feedback-footer .delete-btn:active {
+          background-color: #E98888; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer input {
+        width: 93px;
+        height: 44px;
+        background-color: #3A4374;
+        color: #F2F4FE;
+        border: none;
+        border-radius: 10px; }
+        .edit-feedback-container .edit-feedback-card .edit-feedback-footer input:active {
+          background-color: #656EA3; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer .add-btn {
+        width: 144px;
+        height: 44px;
+        background-color: #AD1FEA;
+        color: #F2F4FE;
+        border: none;
+        border-radius: 10px; }
+        .edit-feedback-container .edit-feedback-card .edit-feedback-footer .add-btn:active {
           background-color: #C75AF6; }
