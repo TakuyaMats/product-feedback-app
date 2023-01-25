@@ -1,1 +1,27 @@
-<h1>Hello</h1>
+<div class="roadmap-grid-container">
+    <div class="roadmap-main-header">
+        <div class="roadmap-header-container">
+            <div class="title-container">
+                <img src="/css/shared/icon-arrow-left.svg">
+                <input class="detail-back-btn" type="button" value="Go Back" onclick="history.back()">
+                <h1>Roadmap</h1>
+            </div>
+            <button class="add-feedback-btn">+ Add Feedback</button>
+        </div>
+    </div>
+    <div class="roadmap-planned">
+        {{#each planned as |feedback|}}
+            {{> planned feedback}}
+        {{/each}}
+    </div>
+    <div class="roadmap-in-progress">
+        {{#each inProgress as |feedback|}}
+            {{> inProgress feedback}}
+        {{/each}}
+    </div>
+    <div class="roadmap-live">
+        {{#each live as |feedback|}}
+            {{> live feedback}}
+        {{/each}}
+    </div>
+</div>
