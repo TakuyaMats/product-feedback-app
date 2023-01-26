@@ -1,16 +1,21 @@
 const router = require('express').Router();
 const { Feedback, User, Comment, Reply } = require('../models');
 const { Op } = require("sequelize");
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
     Feedback.findAll({
         where: {
-            [Op.or]: [
-                { status: 'planned' },
-                { status: 'live' },
-                { status: 'in-progress' }
-            ]
+            [Op.or]: [{
+                status: { [Op.eq]: 'planned'},
+            },
+            {
+                status: { [Op.eq]: 'in-progress'},
+            },
+            {
+                status: { [Op.eq]: 'live'},
+            },
+        ],
         },
         attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
             include: [{
@@ -28,23 +33,17 @@ router.get('/', (req, res) => {
         ]
     })
     .then(feedbackData => {
-        const planned = feedbackData.map(feedback => {
-            if (feedback.status === 'planned') {
-                return feedback.get({ plain: true })
-            }
-        });
+        const planned = feedbackData.filter(feedback => {
+            return feedback.status === 'planned'
+        }).map(planned => planned.get({ plain: true}));
 
-        const live = feedbackData.map(feedback => {
-            if (feedback.status === 'live') {
-                return feedback.get({ plain: true })
-            }
-        });
+        const live = feedbackData.filter(feedback => {
+            return feedback.status === 'live'
+        }).map(live => live.get({ plain: true}));
 
-        const inProgress = feedbackData.map(feedback => {
-            if (feedback.status === 'in-progress') {
-                return feedback.get({ plain: true })
-            }
-        });
+        const inProgress = feedbackData.filter(feedback => {
+            return feedback.status === 'in-progress'
+        }).map(inProgress => inProgress.get({ plain: true}));
 
         res.render('roadmap', { planned, live, inProgress, logged_in: req.session.logged_in });
     })
