@@ -4,14 +4,26 @@
 
 .roadmap-planned {
     grid-area: planned;
+
+    h2 {
+        margin-top: 2em;
+    }
 };
 
 .roadmap-in-progress {
     grid-area: in-progress;
+
+    h2 {
+        margin-top: 2em;
+    }
 };
 
 .roadmap-live {
     grid-area: live;
+
+    h2 {
+        margin-top: 2em;
+    }
 };
 
 .roadmap-grid-container {

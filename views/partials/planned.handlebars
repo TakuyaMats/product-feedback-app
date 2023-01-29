@@ -1,20 +1,21 @@
 <div class="planned-card-container">
-    <div class="planned-header">
-        <div class="oval"></div>
-        <p>{{status}}</p>
-    </div>
-    <a class="planned-title" href="/feedback/{{id}}"><h3>{{title}}</h3></a>
-    <p>{{description}}</p>
-    <input class="detail-btn" type="button" value="{{category}}">
-    <button>{{upvotes}}</button>
-    <div class="planned-footer">
-        <button>
-            <img src="/css/shared/icon-arrow-up.svg">
-            {{upvotes}}
-        </button>
-        <button class="card-feedback-content">
-            <img src="/css/shared/icon-comments.svg">
-            <p>0</p>
-        </button>
+    <div class="container">
+        <div class="planned-header">
+            <div class="oval"></div>
+            <p>{{status}}</p>
+        </div>
+        <a class="planned-title" href="/feedback/{{id}}"><h3>{{title}}</h3></a>
+        <p>{{description}}</p>
+        <input class="detail-btn" type="button" value="{{category}}">
+        <div class="planned-footer">
+            <button>
+                <img src="/css/shared/icon-arrow-up.svg">
+                {{upvotes}}
+            </button>
+            <button class="card-feedback-content">
+                <img src="/css/shared/icon-comments.svg">
+                <p>0</p>
+            </button>
+        </div>
     </div>
 </div>

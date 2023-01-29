@@ -15,7 +15,22 @@ User.hasMany(Comment, {
 User.hasMany(Reply, {
     foreignKey: 'user_id',
     // onDelete: 'CASCADE'
-})
+});
+
+Feedback.belongsTo(User, {
+    foreignKey: 'user_id',
+    // onDelete: 'CASCADE'
+});
+
+Feedback.hasMany(Comment, {
+    foreignKey: 'feedback_id',
+    // onDelete: 'CASCADE'
+});
+
+// Feedback.hasMany(Reply, {
+//     foreignKey: 'feedback_id',
+//     // onDelete: 'CASCADE'
+// });
 
 Comment.belongsTo(Feedback, {
     foreignKey: 'feedback_id',
@@ -28,9 +43,9 @@ Comment.belongsTo(User, {
 });
 
 Comment.hasMany(Reply, {
-    foreignKey: 'reply_id',
+    foreignKey: 'comment_id',
     // onDelete: 'CASCADE'
-})
+});
 
 Reply.belongsTo(User, {
     foreignKey: 'user_id',
@@ -43,20 +58,20 @@ Reply.belongsTo(Comment, {
 });
 
 
-Feedback.belongsTo(User, {
-    foreignKey: 'user_id',
-    // onDelete: 'CASCADE'
-});
+// Feedback.belongsTo(User, {
+//     foreignKey: 'user_id',
+//     // onDelete: 'CASCADE'
+// });
 
-Feedback.hasMany(Comment, {
-    foreignKey: 'feedback_id',
-    // onDelete: 'CASCADE'
-});
+// Feedback.hasMany(Comment, {
+//     foreignKey: 'feedback_id',
+//     // onDelete: 'CASCADE'
+// });
 
-Feedback.hasMany(Reply, {
-    foreignKey: 'reply_id',
-    // onDelete: 'CASCADE'
-});
+// Feedback.hasMany(Reply, {
+//     foreignKey: 'reply_id',
+//     // onDelete: 'CASCADE'
+// });
 
 // Reply.belongsTo(User, {
 //     foreignKey: 'user_id',

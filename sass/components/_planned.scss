@@ -1,0 +1,21 @@
+.planned-card-container {
+    width: 350px;
+    height: 272px;
+    margin-top: 2em;
+    background-color: $color-white;
+    border: solid 6px white;
+    border-radius: 10px / 10px;
+    border-top-color: orange;
+
+    .container {
+        // display: flex;
+        // justify-content: space-between;
+        // flex-direction: column;
+        margin: 2em;
+
+        .planned-header {
+
+        }
+    }
+}
+

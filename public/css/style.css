@@ -270,6 +270,17 @@ body {
         .comments-container .comments-card .comments-card-body .comments-section .comments-content {
           font-size: 15px; }
 
+.planned-card-container {
+  width: 350px;
+  height: 272px;
+  margin-top: 2em;
+  background-color: #FFFFFF;
+  border: solid 6px white;
+  border-radius: 10px / 10px;
+  border-top-color: orange; }
+  .planned-card-container .container {
+    margin: 2em; }
+
 .main-sidebar {
   grid-area: sidebar;
   display: flex;
@@ -652,12 +663,18 @@ body {
 
 .roadmap-planned {
   grid-area: planned; }
+  .roadmap-planned h2 {
+    margin-top: 2em; }
 
 .roadmap-in-progress {
   grid-area: in-progress; }
+  .roadmap-in-progress h2 {
+    margin-top: 2em; }
 
 .roadmap-live {
   grid-area: live; }
+  .roadmap-live h2 {
+    margin-top: 2em; }
 
 .roadmap-grid-container {
   display: grid;

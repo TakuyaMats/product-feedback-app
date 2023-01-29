@@ -15,5 +15,12 @@
         </section>
         <hr>
     </div>
+        {{#each replies}}
+        <div>
+            <h4 class="name">{{user.name}}</h4>
+            <p>{{replyingTo}}</p>
+            <p>{{content}}</p>
+        </div>
+        {{/each}}
     {{/each}}
 </div>

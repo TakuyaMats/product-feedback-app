@@ -10,16 +10,22 @@
         </button>
     </div>
     <div class="roadmap-planned">
+        <h2>Planned ({{planned.length}})</h2>
+        <p>Ideas prioritized for research</p>
         {{#each planned as |feedback|}}
             {{> planned feedback}}
         {{/each}}
     </div>
     <div class="roadmap-in-progress">
+        <h2>In-Progress (3)</h2>
+        <p>Currently being developed</p>
         {{#each inProgress as |feedback|}}
             {{> inProgress feedback}}
         {{/each}}
     </div>
     <div class="roadmap-live">
+        <h2>Live (1)</h2>
+        <p>Released features</p>
         {{#each live as |feedback|}}
             {{> live feedback}}
         {{/each}}

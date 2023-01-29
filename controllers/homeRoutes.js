@@ -20,7 +20,22 @@ router.get('/', (req, res) => {
     })
     .then(feedbackData => {
         const feedbacks = feedbackData.map(feedback => feedback.get({ plain: true }));
-        res.render('homepage', { feedbacks, logged_in: req.session.logged_in });
+
+        let plannedCount = 0;
+        let inProgressCount = 0;
+        let liveCount = 0;
+
+        feedbacks.forEach(feedback => {
+            if (feedback.status === 'planned') {
+                plannedCount += 1;
+            } else if (feedback.status === 'in-progress') {
+                inProgressCount += 1;
+            } else if (feedback.status === 'live') {
+                liveCount += 1;
+            }
+        })
+
+        res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
     })
     .catch(err => {
         console.log(err);
@@ -35,26 +50,27 @@ router.get('/feedback/:id', (req, res) => {
                 id: req.params.id
             },
             attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
-            include: [{
+            include: [
+                {
                     model: Comment,
-                    attributes: [ 'id', 'content', 'feedback_id', 'user_id', 'reply_id' ],
-                    include: {
+                    attributes: [ 'id', 'content', 'feedback_id', 'user_id' ],
+                    include: [{
                         model: User,
                         attributes: ['username', 'name', 'photo'],
-                    // },{
-                    //     model: Reply,
-                    //     attributes: ['content', 'replyingTo'],
-                    // }]
-                }
+                    },
+                    {
+                        model: Reply,
+                        attributes: [ 'id', 'content', 'comment_id', 'replyingTo', 'user_id' ],
+                        include: {
+                            model: User,
+                            attributes: ['username', 'name', 'photo'],
+                        }
+                    }]
                 },
                 {
                     model: User,
                     attributes: ['username', 'name', 'photo'],
                 }
-                // {
-                //     model: Reply,
-                //     attributes: ['content', 'replyingTo'],
-                // }
     ]
         })
         .then(feedbackData => {
@@ -63,6 +79,8 @@ router.get('/feedback/:id', (req, res) => {
                 return;
             }
             const feedback = feedbackData.get({ plain: true });
+
+            console.log(feedback);
             res.render('single-feedback', { feedback, logged_in: req.session.logged_in });
         })
         .catch(err => {
