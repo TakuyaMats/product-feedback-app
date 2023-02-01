@@ -33,7 +33,9 @@ router.get('/', (req, res) => {
             } else if (feedback.status === 'live') {
                 liveCount += 1;
             }
-        })
+        });
+
+        // write logic for sorting through upvotes and comments
 
         res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
     })

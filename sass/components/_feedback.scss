@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
 
     .card-feedback-container {
         display: flex;
@@ -29,7 +30,7 @@
         width: 40px;
         height: 53px;
         border-radius: 10px;
-        background-color: $color-grey;
+        background-color: $color-background-grey;
 
         &:active {
             color: $color-white;
