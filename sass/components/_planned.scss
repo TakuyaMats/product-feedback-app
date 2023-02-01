@@ -3,18 +3,92 @@
     height: 272px;
     margin-top: 2em;
     background-color: $color-white;
-    border: solid 6px white;
-    border-radius: 10px / 10px;
-    border-top-color: orange;
+    border-top: 6px solid $color-planned-orange;
+    border-radius: 5px;
 
     .container {
-        // display: flex;
-        // justify-content: space-between;
-        // flex-direction: column;
-        margin: 2em;
+        margin: 1.5em;
 
         .planned-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.8em;
+            margin-bottom: 16px;
 
+            .oval {
+                width: 8px;
+                height: 8px;
+                background-color: $color-planned-orange;
+                border-radius: 50%;
+            }
+
+            .status {
+                text-transform: capitalize;
+            }
+        }
+
+        .planned-body {
+            height: 76px;
+            margin-bottom: 16px;
+
+            .title {
+                text-decoration: none;
+                margin-bottom: 4px;
+            }
+        }
+
+        .detail-btn {
+            width: 77px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: $color-grey;
+            border: none;
+            margin-bottom: 16px;
+        }
+
+        .planned-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .upvotes {
+                width: 69px;
+                height: 40px;
+                border-radius: 20%;
+                border: none;
+                font-size: 13px;
+                font-weight: 700;
+                box-shadow: 5px 5px 2px rgba($color-black, .3);
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 8px 8px 8px rgba($color-black, .5);
+            
+                    &::after {
+                        transform: scaleX(1.4) scaleY(1.6);
+                        opacity: 0;
+                    }
+                }
+
+                &:active {
+                    transform: translateY(-1px);
+                    box-shadow: 4px 4px 1px rgba($color-black, .5);
+                }
+                
+                img {
+                    margin-right: 9.5px;
+                }
+            }
+
+            .comments {
+                display: flex;
+                justify-content: space-between;
+                width: 44px;
+                height: 23px;
+                border: none;
+                background-color: $color-white;
+            }
         }
     }
 }
