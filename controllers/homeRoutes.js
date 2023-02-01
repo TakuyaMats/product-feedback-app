@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         feedbacks.forEach(feedback => {
             if (feedback.status === 'planned') {
                 plannedCount += 1;
-            } else if (feedback.status === 'in-progress') {
+            } else if (feedback.status === 'in progress') {
                 inProgressCount += 1;
             } else if (feedback.status === 'live') {
                 liveCount += 1;

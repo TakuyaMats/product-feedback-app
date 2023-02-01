@@ -298,7 +298,8 @@ body {
       .planned-card-container .container .planned-body .title {
         text-decoration: none;
         margin-bottom: 4px; }
-    .planned-card-container .container .detail-btn {
+    .planned-card-container .container .category-btn {
+      text-transform: capitalize;
       width: 77px;
       height: 30px;
       border-radius: 10px;
@@ -329,6 +330,140 @@ body {
         .planned-card-container .container .planned-footer .upvotes img {
           margin-right: 9.5px; }
       .planned-card-container .container .planned-footer .comments {
+        display: flex;
+        justify-content: space-between;
+        width: 44px;
+        height: 23px;
+        border: none;
+        background-color: #FFFFFF; }
+
+.inProgress-card-container {
+  width: 350px;
+  height: 272px;
+  margin-top: 2em;
+  background-color: #FFFFFF;
+  border-top: 6px solid #AD1FEA;
+  border-radius: 5px; }
+  .inProgress-card-container .container {
+    margin: 1.5em; }
+    .inProgress-card-container .container .inProgress-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.8em;
+      margin-bottom: 16px; }
+      .inProgress-card-container .container .inProgress-header .oval {
+        width: 8px;
+        height: 8px;
+        background-color: #AD1FEA;
+        border-radius: 50%; }
+      .inProgress-card-container .container .inProgress-header .status {
+        text-transform: capitalize; }
+    .inProgress-card-container .container .inProgress-body {
+      height: 76px;
+      margin-bottom: 16px; }
+      .inProgress-card-container .container .inProgress-body .title {
+        text-decoration: none;
+        margin-bottom: 4px; }
+    .inProgress-card-container .container .category-btn {
+      text-transform: capitalize;
+      width: 77px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: #F2F4FF;
+      border: none;
+      margin-bottom: 16px; }
+    .inProgress-card-container .container .inProgress-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .inProgress-card-container .container .inProgress-footer .upvotes {
+        width: 69px;
+        height: 40px;
+        border-radius: 20%;
+        border: none;
+        font-size: 13px;
+        font-weight: 700;
+        box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3); }
+        .inProgress-card-container .container .inProgress-footer .upvotes:hover {
+          transform: translateY(-3px);
+          box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5); }
+          .inProgress-card-container .container .inProgress-footer .upvotes:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0; }
+        .inProgress-card-container .container .inProgress-footer .upvotes:active {
+          transform: translateY(-1px);
+          box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5); }
+        .inProgress-card-container .container .inProgress-footer .upvotes img {
+          margin-right: 9.5px; }
+      .inProgress-card-container .container .inProgress-footer .comments {
+        display: flex;
+        justify-content: space-between;
+        width: 44px;
+        height: 23px;
+        border: none;
+        background-color: #FFFFFF; }
+
+.live-card-container {
+  width: 350px;
+  height: 272px;
+  margin-top: 2em;
+  background-color: #FFFFFF;
+  border-top: 6px solid #628CFA;
+  border-radius: 5px; }
+  .live-card-container .container {
+    margin: 1.5em; }
+    .live-card-container .container .live-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.8em;
+      margin-bottom: 16px; }
+      .live-card-container .container .live-header .oval {
+        width: 8px;
+        height: 8px;
+        background-color: #628CFA;
+        border-radius: 50%; }
+      .live-card-container .container .live-header .status {
+        text-transform: capitalize; }
+    .live-card-container .container .live-body {
+      height: 76px;
+      margin-bottom: 16px; }
+      .live-card-container .container .live-body .title {
+        text-decoration: none;
+        margin-bottom: 4px; }
+    .live-card-container .container .category-btn {
+      text-transform: capitalize;
+      width: 111px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: #F2F4FF;
+      border: none;
+      margin-bottom: 16px; }
+    .live-card-container .container .live-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .live-card-container .container .live-footer .upvotes {
+        width: 69px;
+        height: 40px;
+        border-radius: 20%;
+        border: none;
+        font-size: 13px;
+        font-weight: 700;
+        box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3); }
+        .live-card-container .container .live-footer .upvotes:hover {
+          transform: translateY(-3px);
+          box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5); }
+          .live-card-container .container .live-footer .upvotes:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0; }
+        .live-card-container .container .live-footer .upvotes:active {
+          transform: translateY(-1px);
+          box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5); }
+        .live-card-container .container .live-footer .upvotes img {
+          margin-right: 9.5px; }
+      .live-card-container .container .live-footer .comments {
         display: flex;
         justify-content: space-between;
         width: 44px;

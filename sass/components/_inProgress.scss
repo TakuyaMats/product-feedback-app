@@ -1,15 +1,15 @@
-.planned-card-container {
+.inProgress-card-container {
     width: 350px;
     height: 272px;
     margin-top: 2em;
     background-color: $color-white;
-    border-top: 6px solid $color-planned-orange;
+    border-top: 6px solid $color-purple;
     border-radius: 5px;
 
     .container {
         margin: 1.5em;
 
-        .planned-header {
+        .inProgress-header {
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -19,7 +19,7 @@
             .oval {
                 width: 8px;
                 height: 8px;
-                background-color: $color-planned-orange;
+                background-color: $color-purple;
                 border-radius: 50%;
             }
 
@@ -28,7 +28,7 @@
             }
         }
 
-        .planned-body {
+        .inProgress-body {
             height: 76px;
             margin-bottom: 16px;
 
@@ -48,7 +48,7 @@
             margin-bottom: 16px;
         }
 
-        .planned-footer {
+        .inProgress-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;

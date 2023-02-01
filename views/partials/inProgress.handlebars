@@ -1,1 +1,23 @@
-<h1>{{title}}</h1>
+<div class="inProgress-card-container">
+    <div class="container">
+        <div class="inProgress-header">
+            <div class="oval"></div>
+            <p class="status">{{status}}</p>
+        </div>
+        <div class="inProgress-body">
+            <a class="title" href="/feedback/{{id}}"><h3>{{title}}</h3></a>
+            <p class="description">{{description}}</p>
+        </div>
+        <input class="category-btn" type="button" value="{{category}}">
+        <div class="inProgress-footer">
+            <button class="upvotes">
+                <img src="/css/shared/icon-arrow-up.svg">
+                {{upvotes}}
+            </button>
+            <button class="comments">
+                <img src="/css/shared/icon-comments.svg">
+                <p>{{comments.length}}</p>
+            </button>
+        </div>
+    </div>
+</div>

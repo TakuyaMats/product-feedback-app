@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
                 status: { [Op.eq]: 'planned'},
             },
             {
-                status: { [Op.eq]: 'in-progress'},
+                status: { [Op.eq]: 'in progress'},
             },
             {
                 status: { [Op.eq]: 'live'},
@@ -42,7 +42,7 @@ router.get('/', (req, res) => {
         }).map(live => live.get({ plain: true}));
 
         const inProgress = feedbackData.filter(feedback => {
-            return feedback.status === 'in-progress'
+            return feedback.status === 'in progress'
         }).map(inProgress => inProgress.get({ plain: true}));
 
         res.render('roadmap', { planned, live, inProgress, logged_in: req.session.logged_in });
