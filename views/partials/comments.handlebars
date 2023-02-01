@@ -16,11 +16,23 @@
         <hr>
     </div>
         {{#each replies}}
-        <div>
-            <h4 class="name">{{user.name}}</h4>
-            <p>{{replyingTo}}</p>
-            <p>{{content}}</p>
-        </div>
+            <div class="reply-card">
+                <section class="reply-card-body">
+                    <img class="reply-profile-picture" src={{user.photo}}>
+                    <div class="reply-section">
+                        <div class="section-header">
+                            <h4 class="name">{{user.name}}</h4>
+                            <p class="username">@{{user.username}}</p>
+                        </div>
+                        <p class="reply-content"> 
+                            @{{replyingTo}} 
+                            {{content}}
+                        </p>
+                    </div>
+                    <button class="reply">Reply</button>
+                </section>
+                <hr>
+            </div>
         {{/each}}
     {{/each}}
 </div>

@@ -471,6 +471,49 @@ body {
         border: none;
         background-color: #FFFFFF; }
 
+.reply-card {
+  margin: 5px;
+  width: 626px;
+  margin-left: 50px; }
+  .reply-card hr {
+    background-color: #647196;
+    opacity: 0.1;
+    margin-bottom: 2em; }
+  .reply-card .reply-card-body {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em; }
+    .reply-card .reply-card-body img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%; }
+    .reply-card .reply-card-body button {
+      align-items: end;
+      text-decoration: none;
+      background-color: #FFFFFF;
+      color: #4661E6;
+      width: 33px;
+      height: 19px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-right: 16px;
+      border: none; }
+      .reply-card .reply-card-body button:hover {
+        text-decoration: underline; }
+    .reply-card .reply-card-body .reply-section {
+      width: 594px; }
+      .reply-card .reply-card-body .reply-section p {
+        margin-bottom: 2em; }
+      .reply-card .reply-card-body .reply-section .section-header p {
+        margin-bottom: 15px;
+        color: #647196;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 2px;
+        font-weight: 400; }
+      .reply-card .reply-card-body .reply-section .reply-content {
+        font-size: 15px; }
+
 .main-sidebar {
   grid-area: sidebar;
   display: flex;
@@ -560,7 +603,8 @@ body {
   justify-content: start;
   background-color: #FFFFFF;
   border-radius: 10px;
-  width: 730px; }
+  width: 730px;
+  margin-bottom: 129px; }
   .detail-feedback-card form {
     margin: 2em; }
     .detail-feedback-card form label h3 {
@@ -898,6 +942,10 @@ body {
       font-size: 14px;
       color: #FFFFFF;
       margin-left: 1em; }
+      .roadmap-main-header .title-container input:active {
+        text-decoration: underline; }
+      .roadmap-main-header .title-container input:hover {
+        text-decoration: underline; }
   .roadmap-main-header .add-feedback-btn {
     display: inline-block;
     background-color: #AD1FEA;
