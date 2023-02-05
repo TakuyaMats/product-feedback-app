@@ -41,13 +41,13 @@
             <h3>{{feedbacks.length}} Suggestions</h3>
             <form action="/action_page.php">
             <label for="feedback-filter">Sort by:</label>
-            <select name="feedback-filter" class="feedback-filter">
-                <option value="most upvotes">Most Upvotes 
+            <select name="feedback-filter" class="feedback-filter" id="feedback-filter">
+                <option class="feedback-sort-options" data-column="upvotes" data-sort-direction="DESC" value="most upvotes" onselect="sortSelection('upvotes')">Most Upvotes 
                     <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up">
                 </option>
-                <option value="least upvotes">Least Upvotes</option>
-                <option value="most comments">Most Comments</option>
-                <option value="least comments">Least Comments</option>
+                <option class="feedback-sort-options" data-column="upvotes" data-sort-direction="ASC" value="least upvotes" onselect="sortSelection('upvotes', 'ASC')">Least Upvotes</option>
+                <option class="feedback-sort-options" data-column="comments" data-sort-direction="DESC" value="most comments" onselect="sortSelection('comments', 'DESC')">Most Comments</option>
+                <option class="feedback-sort-options" data-column="comments" data-sort-direction="ASC" value="least comments" onselect="sortSelection('comments', 'ASC')">Least Comments</option>
             </select>
             {{!-- <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up"> --}}
             </form>

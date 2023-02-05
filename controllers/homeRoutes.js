@@ -99,6 +99,53 @@ router.get('/:category', (req, res) => {
     });
 });
 
+router.get('/sortBy/:column/:sortDirection', (req, res) => {
+    const { column, sortDirection } = req.params;
+
+    Feedback.findAll({
+        order: [
+            [ column, sortDirection ]
+        ],
+        attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
+            include: [{
+                model: Comment,
+                attributes: [ 'id', 'content', 'feedback_id', 'user_id' ],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(feedbackData => {
+        const feedbacks = feedbackData.map(feedback => feedback.get({ plain: true }));
+
+        let plannedCount = 0;
+        let inProgressCount = 0;
+        let liveCount = 0;
+
+        feedbacks.forEach(feedback => {
+            if (feedback.status === 'planned') {
+                plannedCount += 1;
+            } else if (feedback.status === 'in progress') {
+                inProgressCount += 1;
+            } else if (feedback.status === 'live') {
+                liveCount += 1;
+            }
+        });
+
+        res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 // reverse? include model Reply and include Comment?
 router.get('/feedback/:id', (req, res) => {
     Feedback.findOne({
