@@ -35,8 +35,62 @@ router.get('/', (req, res) => {
             }
         });
 
-        // write logic for sorting through upvotes and comments
+        res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
+router.get('/:category', (req, res) => {
+    const category = req.params.category;
+    console.log(category);
+
+    Feedback.findAll({
+        attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
+            include: [{
+                model: Comment,
+                attributes: [ 'id', 'content', 'feedback_id', 'user_id' ],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(feedbackData => {
+        let feedbacks = feedbackData.map(feedback => feedback.get({ plain: true }));
+
+        let plannedCount = 0;
+        let inProgressCount = 0;
+        let liveCount = 0;
+        let filteredFeedbackArr = [];
+
+        feedbacks.forEach(feedback => {
+            if (feedback.status === 'planned') {
+                plannedCount += 1;
+            } else if (feedback.status === 'in progress') {
+                inProgressCount += 1;
+            } else if (feedback.status === 'live') {
+                liveCount += 1;
+            }
+
+            if (feedback.category === category) {
+                filteredFeedbackArr.push(feedback);
+            }
+        });
+
+        if (category === 'all') {
+            filteredFeedbackArr = feedbacks;
+        }
+
+        feedbacks = filteredFeedbackArr
+        console.log(feedbacks);
         res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
     })
     .catch(err => {

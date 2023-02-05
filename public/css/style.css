@@ -210,7 +210,7 @@ body {
     color: #4661E6;
     font-weight: 600;
     text-transform: capitalize;
-    background-color: #F2F4FF;
+    background-color: #d3d5d7;
     border-radius: 10px; }
   .card-feedback .card-feedback-content {
     display: flex;
@@ -771,7 +771,7 @@ body {
       .edit-feedback-container .edit-feedback-header .edit-feedback-btn .back-container input {
         text-decoration: none;
         border: none;
-        background-color: #FFFDD0;
+        background-color: #d3d5d7;
         font-weight: 700;
         font-size: 14px; }
         .edit-feedback-container .edit-feedback-header .edit-feedback-btn .back-container input:active {

@@ -4,13 +4,13 @@
             <h2>Frontend Mentor</h2>
             <p>Feedback Board</p>
         </div>
-        <div class="main__sidebar-category">
-            <button class="category-all">All</button>
-            <button class="category-ui">UI</button>
-            <button class="category-ux">UX</button>
-            <button class="category-enhancement">Enhancement</button>
-            <button class="category-bug">Bug</button>
-            <button class="category-feature">Feature</button>
+        <div class="main__sidebar-category" id="categoryBtnContainer">
+            <button class="btn category-all active" onclick="filterSelection('all')">All</button>
+            <button class="btn category-ui" onclick="filterSelection('ui')">UI</button>
+            <button class="btn category-ux" onclick="filterSelection('ux')">UX</button>
+            <button class="btn category-enhancement" onclick="filterSelection('enhancement')">Enhancement</button>
+            <button class="btn category-bug" onclick="filterSelection('bug')">Bug</button>
+            <button class="btn category-feature" onclick="filterSelection('feature')">Feature</button>
         </div>
         <div class="main__sidebar-roadmap">
             <div class="roadmap__header">
