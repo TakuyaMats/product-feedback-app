@@ -90,8 +90,12 @@ router.get('/:category', (req, res) => {
         }
 
         feedbacks = filteredFeedbackArr
-        console.log(feedbacks);
-        res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
+        
+        if (feedbacks.length === 0) {
+            res.status(404).render('homepage-404')
+        } else {
+            res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
+        }
     })
     .catch(err => {
         console.log(err);

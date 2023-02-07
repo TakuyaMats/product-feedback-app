@@ -43,38 +43,3 @@ feedbackFilter.addEventListener("change", function(event) {
         sortSelection(column, sortDirection)
     }
 });
-
-// for (let i = 0; i < feedbackFilter.length; i++) {
-//     const option = feedbackFilter[i];
-//     console.log(option);
-//     option.addEventListener("click", function(event) {
-        
-//         const column = option.dataset.column;
-//         const sortDirection = option.dataset.sortDirection;
-//         sortSelection(column, sortDirection);
-//     });
-
-//     option.addEventListener("change", function() {
-//         const column = option.dataset.column;
-//         const sortDirection = option.dataset.sortDirection;
-//         sortSelection(column, sortDirection);
-//     });
-// };
-
-// [...feedbackSortOptions].forEach(option => {
-//     option.addEventListener("click", function(event) {
-        
-//         const column = option.dataset.column;
-//         const sortDirection = option.dataset.sortDirection;
-//         console.log(column, sortDirection);
-//         sortSelection(column, sortDirection);
-//     });
-
-//     option.addEventListener("change", function() {
-//         const column = option.dataset.column;
-//         const sortDirection = option.dataset.sortDirection;
-//         console.log(column, sortDirection);
-//         sortSelection(column, sortDirection);
-//     });
-    
-// });

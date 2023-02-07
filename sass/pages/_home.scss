@@ -8,8 +8,8 @@
 };
 .main-category { grid-area: category;};
 .main-roadmap { grid-area: roadmap};
-.main-header { grid-area: header;};
-.main-feedback { grid-area: feedback;};
+.main-header { grid-area: header; margin-right: 75px;};
+.main-feedback { grid-area: feedback; margin-right: 75px;};
 
 .grid-container {
     display: grid;
