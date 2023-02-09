@@ -155,6 +155,21 @@ body {
       color: #F2F4FE; }
     .main-header .add-feedback:active {
       background-color: #C75AF6; }
+  .main-header .login {
+    display: inline-block;
+    background-color: #AD1FEA;
+    width: 100px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 20em;
+    border: none; }
+    .main-header .login a {
+      text-decoration: none;
+      color: #F2F4FE; }
+    .main-header .login:active {
+      background-color: #C75AF6; }
 
 .card-feedback {
   height: 151px;

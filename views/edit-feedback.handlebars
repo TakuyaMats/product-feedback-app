@@ -10,6 +10,7 @@
     <div class="edit-feedback-card">
         <div class="card-container">
             <img src="/css/shared/icon-edit-feedback.svg">
+            {{!-- this need to render dynamically --}}
             <h1>Editing 'Add a dark theme option'</h1>
             <form class="card-body edit-feedback-form" id="edit-feedback-form">
                 <div class="title-container">
@@ -17,7 +18,7 @@
                         <h4>Feedback Title</h4>
                         <p>Add a short, descriptive headline</p>
                     </label>
-                    <input type="text" id="feedback-title" name="feedback-title" class="form-input-title"/>
+                    <input type="text" id="feedback-title" name="feedback-title" class="form-input-title" value="{{feedback.title}}"/>
                 </div>
                 <div class="category-container">
                     <label for="category">
@@ -48,10 +49,10 @@
                         <h4>Feedback Detail</h4>
                         <p>Include any specific comments on what should be improved, added, etc.</p>
                     </label>
-                    <input type="text" id="feedback-detail" name="feedback-detail" class="form-input-detail"/>
+                    <input type="text" id="feedback-detail" name="feedback-detail" class="form-input-detail" value="{{feedback.description}}"/>
                 </div>
                 <div class="edit-feedback-footer">
-                    <button type="submit" class="delete-btn">Delete</button>
+                    <button type="button" class="delete-btn">Delete</button>
                     <input class="detail-btn" type="button" value="Cancel" onclick="history.back()">
                     <button type="submit" class="add-btn">Add Feedback</button>
                 </div>
@@ -59,3 +60,6 @@
         </div>
     </div>
 </div>
+
+<script src="/js/edit-feedback.js"></script>
+<script src="/js/delete-feedback.js"></script>

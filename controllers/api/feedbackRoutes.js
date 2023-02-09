@@ -30,7 +30,6 @@ router.get('/', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-
 });
 
 router.get('/:id', (req, res) => {
@@ -73,6 +72,7 @@ router.post('/', withAuth, (req, res) => {
     Feedback.create({
             title: req.body.title,
             category: req.body.category,
+            status: req.body.status,
             description: req.body.description,
             user_id: req.session.user_id
         })
@@ -83,42 +83,44 @@ router.post('/', withAuth, (req, res) => {
         });
 });
 
-// router.put('/:id', withAuth, (req, res) => {
-//     Post.update({
-//             title: req.body.title,
-//             description: req.body.description
-//         }, {
-//             where: {
-//                 id: req.params.id
-//             }
-//         }).then(feedbackData => {
-//             if (!feedbackData) {
-//                 res.status(404).json({ message: 'No post found with this id' });
-//                 return;
-//             }
-//             res.json(feedbackData);
-//         })
-//         .catch(err => {
-//             console.log(err);
-//             res.status(500).json(err);
-//         });
-// });
+router.put('/:id', withAuth, (req, res) => {
+    Post.update({
+            title: req.body.title,
+            category: req.body.category,
+            status: req.body.status,
+            description: req.body.description
+        }, {
+            where: {
+                id: req.params.id
+            }
+        }).then(feedbackData => {
+            if (!feedbackData) {
+                res.status(404).json({ message: 'No feedback found with this id' });
+                return;
+            }
+            res.json(feedbackData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
-// router.delete('/:id', withAuth, (req, res) => {
-//     Post.destroy({
-//         where: {
-//             id: req.params.id
-//         }
-//     }).then(feedbackData => {
-//         if (!feedbackData) {
-//             res.status(404).json({ message: 'No post found with this id' });
-//             return;
-//         }
-//         res.json(feedbackData);
-//     }).catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//     });
-// });
+router.delete('/:id', withAuth, (req, res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(feedbackData => {
+        if (!feedbackData) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+        }
+        res.json(feedbackData);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;

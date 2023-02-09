@@ -43,6 +43,15 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/login', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
+
+
 router.get('/:category', (req, res) => {
     const category = req.params.category;
     console.log(category);
