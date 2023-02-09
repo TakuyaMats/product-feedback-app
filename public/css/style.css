@@ -1029,6 +1029,8 @@ body {
         text-decoration: underline; }
       .roadmap-main-header .title-container input:hover {
         text-decoration: underline; }
+    .roadmap-main-header .title-container h1 {
+      margin-top: 5px; }
   .roadmap-main-header .add-feedback-btn {
     display: inline-block;
     background-color: #AD1FEA;
@@ -1045,3 +1047,46 @@ body {
       color: #F2F4FE; }
     .roadmap-main-header .add-feedback-btn:active {
       background-color: #C75AF6; }
+
+.signup-grid-container {
+  display: grid;
+  grid-template-areas: 'header header' 'login signup';
+  gap: 10px;
+  padding: 4em;
+  padding-top: 40px; }
+
+.signup-main-header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373F68;
+  height: 113px;
+  border-radius: 10px;
+  color: #F2F4FF;
+  font-size: 14px;
+  gap: 10px; }
+  .signup-main-header .title-container {
+    margin-left: 2em; }
+    .signup-main-header .title-container img {
+      transform: rotate(270deg); }
+    .signup-main-header .title-container input {
+      text-decoration: none;
+      border: none;
+      background-color: #373F68;
+      font-weight: 700;
+      font-size: 14px;
+      color: #FFFFFF;
+      margin-left: 1em; }
+      .signup-main-header .title-container input:active {
+        text-decoration: underline; }
+      .signup-main-header .title-container input:hover {
+        text-decoration: underline; }
+    .signup-main-header .title-container h1 {
+      margin-top: 5px; }
+
+.login-container {
+  grid-area: login; }
+
+.signup-container {
+  grid-area: signup; }
