@@ -157,13 +157,13 @@ body {
       background-color: #C75AF6; }
   .main-header .login {
     display: inline-block;
-    background-color: #AD1FEA;
+    background-color: #4661E6;
     width: 100px;
     height: 44px;
     border-radius: 10px;
     font-size: 14px;
     font-weight: 700;
-    margin-left: 20em;
+    margin-right: 1em;
     border: none; }
     .main-header .login a {
       text-decoration: none;
@@ -1051,8 +1051,8 @@ body {
 .signup-grid-container {
   display: grid;
   grid-template-areas: 'header header' 'login signup';
-  gap: 10px;
-  padding: 4em;
+  gap: 30px;
+  padding: 6em;
   padding-top: 40px; }
 
 .signup-main-header {
@@ -1064,8 +1064,7 @@ body {
   height: 113px;
   border-radius: 10px;
   color: #F2F4FF;
-  font-size: 14px;
-  gap: 10px; }
+  font-size: 14px; }
   .signup-main-header .title-container {
     margin-left: 2em; }
     .signup-main-header .title-container img {
@@ -1086,7 +1085,116 @@ body {
       margin-top: 5px; }
 
 .login-container {
-  grid-area: login; }
+  grid-area: login;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 500px;
+  height: 411px;
+  border-radius: 10px; }
+  .login-container h1 {
+    margin-bottom: 40px; }
+  .login-container .login-form .form-group-email label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: bold; }
+  .login-container .login-form .form-group-email input {
+    width: 356px;
+    height: 48px;
+    background-color: #F7F8FD;
+    border: none;
+    border-radius: 10px;
+    text-indent: 5%;
+    margin-bottom: 40px; }
+  .login-container .login-form .form-group-password label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: bold; }
+  .login-container .login-form .form-group-password input {
+    width: 328px;
+    height: 48px;
+    background-color: #F7F8FD;
+    border: none;
+    border-radius: 10px;
+    text-indent: 5%;
+    margin-bottom: 40px; }
+  .login-container .login-form .form-group-submit button {
+    width: 144px;
+    height: 44px;
+    background-color: #AD1FEA;
+    color: #F2F4FE;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 18em; }
+    .login-container .login-form .form-group-submit button:active {
+      background-color: #C75AF6; }
 
 .signup-container {
-  grid-area: signup; }
+  grid-area: signup;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 500px;
+  height: 411px;
+  border-radius: 10px; }
+  .signup-container h1 {
+    margin-bottom: 40px; }
+  .signup-container .signup-form .form-group-username label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: bold; }
+  .signup-container .signup-form .form-group-username input {
+    width: 356px;
+    height: 48px;
+    background-color: #F7F8FD;
+    border: none;
+    border-radius: 10px;
+    text-indent: 5%;
+    margin-bottom: 40px; }
+  .signup-container .signup-form .form-group-email label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: bold; }
+  .signup-container .signup-form .form-group-email input {
+    width: 385px;
+    height: 48px;
+    background-color: #F7F8FD;
+    border: none;
+    border-radius: 10px;
+    text-indent: 5%;
+    margin-bottom: 40px; }
+  .signup-container .signup-form .form-group-password label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: bold; }
+  .signup-container .signup-form .form-group-password input {
+    width: 360px;
+    height: 48px;
+    background-color: #F7F8FD;
+    border: none;
+    border-radius: 10px;
+    text-indent: 5%;
+    margin-bottom: 40px; }
+  .signup-container .signup-form .form-group-submit button {
+    width: 144px;
+    height: 44px;
+    background-color: #AD1FEA;
+    color: #F2F4FE;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 21em; }
+    .signup-container .signup-form .form-group-submit button:active {
+      background-color: #C75AF6; }
