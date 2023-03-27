@@ -82,5 +82,26 @@
             background-color: $color-add-feedback-purple;
         }
     }
+
+    .logout {
+        display: inline-block;
+        background-color: $color-dark-blue;
+        width: 100px;
+        height: 44px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-right: 1em;
+        border: none;
+
+        a {
+            text-decoration: none;
+            color: $color-white-text;
+        }
+
+        &:active {
+            background-color: $color-add-feedback-purple;
+        }
+    }
 }
 

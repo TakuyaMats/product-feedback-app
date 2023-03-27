@@ -43,12 +43,21 @@ router.get('/', (req, res) => {
     });
 });
 
+// the first page a person sees in my application should be the sign up page? If they are not logged in
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');
         return;
     }
     res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+    res.render('signup');
 });
 
 

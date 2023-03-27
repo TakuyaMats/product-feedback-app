@@ -54,15 +54,15 @@
         </div>
         <div class="button-container">
             {{#if logged_in}}
-                <button class="no-button" href="/" id="logout">logout</button>
+                {{!-- <button class="no-button" href="/" id="logout">logout</button> --}}
+                <button class="logout" type="submit">
+                    <a id="logout" class="logout-link" href="/">Logout</a>
+                </button>
             {{else}}
                 <button class="login" type="submit">
                     <a class="login-link" href="/login">Login</a>
                 </button>
             {{/if}}
-            {{!-- <button class="login" type="submit">
-                <a class="login-link" href="/login">Login</a>
-            </button> --}}
             <button class="add-feedback" type="submit">
                 <a class="add-feedback-link" href="/dashboard/new">+ Add Feedback</a>
             </button>

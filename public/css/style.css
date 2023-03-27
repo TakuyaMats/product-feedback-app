@@ -170,6 +170,21 @@ body {
       color: #F2F4FE; }
     .main-header .login:active {
       background-color: #C75AF6; }
+  .main-header .logout {
+    display: inline-block;
+    background-color: #4661E6;
+    width: 100px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 1em;
+    border: none; }
+    .main-header .logout a {
+      text-decoration: none;
+      color: #F2F4FE; }
+    .main-header .logout:active {
+      background-color: #C75AF6; }
 
 .card-feedback {
   height: 151px;
@@ -1049,19 +1064,21 @@ body {
       background-color: #C75AF6; }
 
 .signup-grid-container {
-  display: grid;
-  grid-template-areas: 'header header' 'login signup';
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
   padding: 6em;
   padding-top: 40px; }
 
 .signup-main-header {
-  grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #373F68;
   height: 113px;
+  width: 500px;
   border-radius: 10px;
   color: #F2F4FF;
   font-size: 14px; }
@@ -1087,53 +1104,64 @@ body {
 .login-container {
   grid-area: login;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   background-color: #FFFFFF;
   width: 500px;
   height: 411px;
   border-radius: 10px; }
-  .login-container h1 {
-    margin-bottom: 40px; }
-  .login-container .login-form .form-group-email label {
-    margin-bottom: 8px;
-    font-size: 14px;
-    letter-spacing: -0.2px;
-    font-weight: bold; }
-  .login-container .login-form .form-group-email input {
-    width: 356px;
-    height: 48px;
-    background-color: #F7F8FD;
-    border: none;
-    border-radius: 10px;
-    text-indent: 5%;
-    margin-bottom: 40px; }
-  .login-container .login-form .form-group-password label {
-    margin-bottom: 8px;
-    font-size: 14px;
-    letter-spacing: -0.2px;
-    font-weight: bold; }
-  .login-container .login-form .form-group-password input {
-    width: 328px;
-    height: 48px;
-    background-color: #F7F8FD;
-    border: none;
-    border-radius: 10px;
-    text-indent: 5%;
-    margin-bottom: 40px; }
-  .login-container .login-form .form-group-submit button {
-    width: 144px;
-    height: 44px;
-    background-color: #AD1FEA;
-    color: #F2F4FE;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 700;
-    margin-left: 18em; }
-    .login-container .login-form .form-group-submit button:active {
-      background-color: #C75AF6; }
+  .login-container .inner-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 45px; }
+    .login-container .inner-container h1 {
+      margin-bottom: 40px; }
+    .login-container .inner-container .login-form .form-group-email label {
+      margin-bottom: 8px;
+      font-size: 14px;
+      letter-spacing: -0.2px;
+      font-weight: bold; }
+    .login-container .inner-container .login-form .form-group-email input {
+      width: 356px;
+      height: 48px;
+      background-color: #F7F8FD;
+      border: none;
+      border-radius: 10px;
+      text-indent: 5%;
+      margin-bottom: 40px; }
+    .login-container .inner-container .login-form .form-group-password label {
+      margin-bottom: 8px;
+      font-size: 14px;
+      letter-spacing: -0.2px;
+      font-weight: bold; }
+    .login-container .inner-container .login-form .form-group-password input {
+      width: 328px;
+      height: 48px;
+      background-color: #F7F8FD;
+      border: none;
+      border-radius: 10px;
+      text-indent: 5%;
+      margin-bottom: 40px; }
+    .login-container .inner-container .login-form .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .login-container .inner-container .login-form .button-container a {
+        text-decoration: none;
+        font-weight: bold;
+        font-weight: 700; }
+      .login-container .inner-container .login-form .button-container .form-group-login button {
+        width: 144px;
+        height: 44px;
+        background-color: #AD1FEA;
+        color: #F2F4FE;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-left: 10em; }
+        .login-container .inner-container .login-form .button-container .form-group-login button:active {
+          background-color: #C75AF6; }
 
 .signup-container {
   grid-area: signup;

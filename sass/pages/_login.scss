@@ -1,20 +1,24 @@
 .signup-grid-container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'login signup';
-        gap: 30px;
-        padding: 6em;
-        padding-top: 40px;
+    // display: grid;
+    // grid-template-areas:
+    //     'header'
+    //     'login';
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 6em;
+    padding-top: 40px;
 };
 
 .signup-main-header {
-    grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $color-header-blue;
     height: 113px;
+    width: 500px;
     border-radius: 10px;
     color: $color-grey;
     font-size: 14px;
@@ -55,72 +59,94 @@
 .login-container {
     grid-area: login;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center; 
+    // justify-content: center;
+    // flex-direction: column;
+    // align-items: center; 
     background-color: $color-white;
     width: 500px;
     height: 411px;
     border-radius: 10px;
 
-    h1 {
-        margin-bottom: 40px;
-    }
+    .inner-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    margin: 45px;
 
-    .login-form {
-
-        .form-group-email {
-            label {
-                margin-bottom: 8px;
-                font-size: 14px;
-                letter-spacing: -0.2px;
-                font-weight: bold;
-            }
-
-            input {
-                width: 356px;
-                height: 48px;
-                background-color: $color-off-white;
-                border: none;
-                border-radius: 10px;
-                text-indent: 5%;
-                margin-bottom: 40px;
-            }
+        h1 {
+            margin-bottom: 40px;
         }
 
-        .form-group-password {
-            label {
-                margin-bottom: 8px;
-                font-size: 14px;
-                letter-spacing: -0.2px;
-                font-weight: bold;
+        .login-form {
+
+            .form-group-email {
+                label {
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    letter-spacing: -0.2px;
+                    font-weight: bold;
+                }
+
+                input {
+                    width: 356px;
+                    height: 48px;
+                    background-color: $color-off-white;
+                    border: none;
+                    border-radius: 10px;
+                    text-indent: 5%;
+                    margin-bottom: 40px;
+                }
             }
 
-            input {
-                width: 328px;
-                height: 48px;
-                background-color: $color-off-white;
-                border: none;
-                border-radius: 10px;
-                text-indent: 5%;
-                margin-bottom: 40px;
+            .form-group-password {
+                label {
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    letter-spacing: -0.2px;
+                    font-weight: bold;
+                }
+
+                input {
+                    width: 328px;
+                    height: 48px;
+                    background-color: $color-off-white;
+                    border: none;
+                    border-radius: 10px;
+                    text-indent: 5%;
+                    margin-bottom: 40px;
+                }
             }
-        }
 
-        .form-group-submit {
-            button {
-                width: 144px;
-                height: 44px;
-                background-color: $color-purple;
-                color: $color-cancel-white;
-                border: none;
-                border-radius: 10px;
-                font-size: 14px;
-                font-weight: 700;
-                margin-left: 18em;
+            .button-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-                &:active {
-                    background-color: $color-add-feedback-purple;
+                a {
+                    // margin-top: 150px;
+                    // height: 44px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-weight: 700;
+                }
+                
+                .form-group-login {
+                    button {
+                        width: 144px;
+                        height: 44px;
+                        background-color: $color-purple;
+                        color: $color-cancel-white;
+                        border: none;
+                        border-radius: 10px;
+                        font-size: 14px;
+                        font-weight: 700;
+                        margin-left: 10em;
+        
+                        &:active {
+                            background-color: $color-add-feedback-purple;
+                        }
+                    }
                 }
             }
         }
