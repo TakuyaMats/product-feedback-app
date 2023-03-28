@@ -6,6 +6,14 @@ const {
 } = require('../../models');
 
 
+// router.get('/signup', (req, res) => {
+//     // if (req.session.logged_in) {
+//     //     res.redirect('/');
+//     //     return;
+//     // }
+//     res.render('signup');
+// });
+
 router.get('/', (req, res) => {
     User.findAll({
             attributes: {
@@ -33,7 +41,7 @@ router.get('/:id', (req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['id', 'comment', 'feedback_id', 'user_id'],
+                    attributes: ['id', 'content', 'feedback_id', 'user_id'],
                     include: {
                         model: Feedback,
                         attributes: ['title']
@@ -63,6 +71,8 @@ router.get('/:id', (req, res) => {
 router.post('/signup', async (req, res) => {
     try {
         const userData = await User.create(req.body);
+
+        console.log(userData);
 
         req.session.save(() => {
             req.session.id = userData.id;

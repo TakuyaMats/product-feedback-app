@@ -1063,7 +1063,7 @@ body {
     .roadmap-main-header .add-feedback-btn:active {
       background-color: #C75AF6; }
 
-.signup-grid-container {
+.login-grid-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1072,7 +1072,7 @@ body {
   padding: 6em;
   padding-top: 40px; }
 
-.signup-main-header {
+.login-main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1082,11 +1082,11 @@ body {
   border-radius: 10px;
   color: #F2F4FF;
   font-size: 14px; }
-  .signup-main-header .title-container {
+  .login-main-header .title-container {
     margin-left: 2em; }
-    .signup-main-header .title-container img {
+    .login-main-header .title-container img {
       transform: rotate(270deg); }
-    .signup-main-header .title-container input {
+    .login-main-header .title-container input {
       text-decoration: none;
       border: none;
       background-color: #373F68;
@@ -1094,11 +1094,11 @@ body {
       font-size: 14px;
       color: #FFFFFF;
       margin-left: 1em; }
-      .signup-main-header .title-container input:active {
+      .login-main-header .title-container input:active {
         text-decoration: underline; }
-      .signup-main-header .title-container input:hover {
+      .login-main-header .title-container input:hover {
         text-decoration: underline; }
-    .signup-main-header .title-container h1 {
+    .login-main-header .title-container h1 {
       margin-top: 5px; }
 
 .login-container {
@@ -1226,3 +1226,135 @@ body {
     margin-left: 21em; }
     .signup-container .signup-form .form-group-submit button:active {
       background-color: #C75AF6; }
+
+.signup-grid-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 6em;
+  padding-top: 40px; }
+
+.signup-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373F68;
+  height: 113px;
+  width: 500px;
+  border-radius: 10px;
+  color: #F2F4FF;
+  font-size: 14px; }
+  .signup-main-header .title-container {
+    margin-left: 2em; }
+    .signup-main-header .title-container img {
+      transform: rotate(270deg); }
+    .signup-main-header .title-container input {
+      text-decoration: none;
+      border: none;
+      background-color: #373F68;
+      font-weight: 700;
+      font-size: 14px;
+      color: #FFFFFF;
+      margin-left: 1em; }
+      .signup-main-header .title-container input:active {
+        text-decoration: underline; }
+      .signup-main-header .title-container input:hover {
+        text-decoration: underline; }
+    .signup-main-header .title-container h1 {
+      margin-top: 5px; }
+
+.signup-container {
+  grid-area: signup;
+  display: flex;
+  background-color: #FFFFFF;
+  width: 500px;
+  height: 511px;
+  border-radius: 10px; }
+  .signup-container .inner-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px; }
+    .signup-container .inner-container h1 {
+      margin-bottom: 40px; }
+    .signup-container .inner-container .signup-form .input {
+      position: relative;
+      margin: 5px; }
+      .signup-container .inner-container .signup-form .input__label {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        padding: calc(.5rem * 0.75) calc(.5rem * .5);
+        margin: calc(.5rem * 0.75 + 3px) calc(.5rem * .5);
+        background: white;
+        white-space: nowrap;
+        transform: translate(0, 0);
+        transform-origin: 0 0;
+        background: var(white);
+        transition: transform 120ms ease-in;
+        font-weight: bold;
+        line-height: 1.2; }
+      .signup-container .inner-container .signup-form .input__field {
+        box-sizing: border-box;
+        display: block;
+        text-indent: 5%;
+        width: 100%;
+        height: 50px;
+        font-weight: bold;
+        border: 3px solid currentColor;
+        padding: calc(.5 * 1.5) 0.5;
+        color: currentColor;
+        background: transparent;
+        border-radius: 10px; }
+        .signup-container .inner-container .signup-form .input__field:focus + .input__label, .signup-container .inner-container .signup-form .input__field:not(:placeholder-shown) + .input__label {
+          transform: translate(0.25rem, -65%) scale(0.8);
+          color: #fab700; }
+    .signup-container .inner-container .signup-form .form-group-email label {
+      margin-bottom: 8px;
+      font-size: 14px;
+      letter-spacing: -0.2px;
+      font-weight: bold; }
+    .signup-container .inner-container .signup-form .form-group-email input {
+      width: 356px;
+      height: 48px;
+      background-color: #F7F8FD;
+      border: none;
+      border-radius: 10px;
+      text-indent: 5%;
+      margin-bottom: 40px; }
+    .signup-container .inner-container .signup-form .form-group-password label {
+      margin-bottom: 8px;
+      font-size: 14px;
+      letter-spacing: -0.2px;
+      font-weight: bold; }
+    .signup-container .inner-container .signup-form .form-group-password input {
+      width: 328px;
+      height: 48px;
+      background-color: #F7F8FD;
+      border: none;
+      border-radius: 10px;
+      text-indent: 5%;
+      margin-bottom: 40px; }
+    .signup-container .inner-container .signup-form .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .signup-container .inner-container .signup-form .button-container a {
+        text-decoration: none;
+        font-weight: bold;
+        font-weight: 700; }
+      .signup-container .inner-container .signup-form .button-container .form-group-signup button {
+        width: 144px;
+        height: 44px;
+        background-color: #AD1FEA;
+        color: #F2F4FE;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-left: 10em; }
+        .signup-container .inner-container .signup-form .button-container .form-group-signup button:active {
+          background-color: #C75AF6; }

@@ -1,0 +1,37 @@
+<div class="signup-grid-container">
+    <div class="signup-main-header">
+        <div class="title-container">
+            <img src="/css/shared/icon-arrow-up-white.svg">
+            <input class="detail-back-btn" type="button" value="Go Back" onclick="history.back()">
+            <h1>Sign up</h1>
+        </div>
+    </div>
+    <div class="signup-container">
+        <div class="inner-container">
+            <h1>Sign up</h1>
+            <form id="signup-form" class="form signup-form" method="POST">
+                <label class="input" for="name-signup">
+                    <input class="input__field" id="name-signup" type="text" placeholder=" " />
+                    <span class="input__label">Full Name</span>
+                </label>
+                <label class="input" for="username-signup">
+                    <input class="input__field" id="username-signup" type="text" placeholder=" " />
+                    <span class="input__label">Username</span>
+                </label>
+                <label class="input" for="email-signup">
+                    <input class="input__field" id="email-signup" type="text" placeholder=" " />
+                    <span class="input__label">Email Address</span>
+                </label>
+                <label class="input" for="password-signup">
+                    <input class="input__field" id="password-signup" type="text" placeholder=" " />
+                    <span class="input__label">Password</span>
+                </label>
+                <div class="form-group-submit">
+                    <button class="btn btn-primary" type="submit">signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/signup.js"></script>

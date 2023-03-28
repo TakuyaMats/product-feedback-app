@@ -1,8 +1,4 @@
-.login-grid-container {
-    // display: grid;
-    // grid-template-areas:
-    //     'header'
-    //     'login';
+.signup-grid-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -12,7 +8,7 @@
     padding-top: 40px;
 };
 
-.login-main-header {
+.signup-main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,8 +18,6 @@
     border-radius: 10px;
     color: $color-grey;
     font-size: 14px;
-    // margin-right: 95px;
-    // gap: 10px;
 
     .title-container {
         margin-left: 2em;
@@ -56,15 +50,15 @@
     }
 };
 
-.login-container {
-    grid-area: login;
+.signup-container {
+    grid-area: signup;
     display: flex;
     // justify-content: center;
     // flex-direction: column;
     // align-items: center; 
     background-color: $color-white;
     width: 500px;
-    height: 411px;
+    height: 511px;
     border-radius: 10px;
 
     .inner-container {
@@ -72,13 +66,56 @@
     justify-content: center;
     flex-direction: column;
     align-items: center; 
-    margin: 45px;
+    margin: 40px;
 
         h1 {
             margin-bottom: 40px;
         }
 
-        .login-form {
+        .signup-form {
+
+            .input {
+                position: relative;
+                margin: 5px;
+                
+                &__label {
+                    position: absolute;
+                    left: 0;
+                    top: 20px;
+                    padding: calc(.5rem * 0.75) calc(.5rem * .5);
+                    margin: calc(.5rem * 0.75 + 3px) calc(.5rem * .5);
+                    background: white;
+                    white-space: nowrap;
+                    transform: translate(0, 0);
+                    transform-origin: 0 0;
+                    background: var($color-light);
+                    transition: transform 120ms ease-in;
+                    font-weight: bold;
+                    line-height: 1.2;
+                }
+
+                &__field {
+                    box-sizing: border-box;
+                    display: block;
+                    text-indent: 5%;
+                    width: 100%;
+                    height: 50px;
+                    font-weight: bold;
+                    border: 3px solid currentColor;
+                    padding: calc(.5 * 1.5) .5;
+                    color: currentColor;
+                    background: transparent;
+                    border-radius: 10px;
+                    
+                    &:focus,
+                    &:not(:placeholder-shown) {
+                        & + .input__label {
+                            transform: translate(.25rem, -65%) scale(.8);
+                            color: $color-signal;
+                        }
+                    }
+                }
+            }
 
             .form-group-email {
                 label {
@@ -131,7 +168,7 @@
                     font-weight: 700;
                 }
                 
-                .form-group-login {
+                .form-group-signup {
                     button {
                         width: 144px;
                         height: 44px;
@@ -147,101 +184,6 @@
                             background-color: $color-add-feedback-purple;
                         }
                     }
-                }
-            }
-        }
-    }
-};
-
-.signup-container {
-    grid-area: signup;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: $color-white;
-    width: 500px;
-    height: 411px;
-    border-radius: 10px;
-
-    h1 {
-        margin-bottom: 40px;
-    }
-
-    .signup-form {
-        .form-group-username {
-            label {
-                margin-bottom: 8px;
-                font-size: 14px;
-                letter-spacing: -0.2px;
-                font-weight: bold;
-            }
-
-            input {
-                width: 356px;
-                height: 48px;
-                background-color: $color-off-white;
-                border: none;
-                border-radius: 10px;
-                text-indent: 5%;
-                margin-bottom: 40px;
-            }
-        }
-
-
-        .form-group-email {
-            label {
-                margin-bottom: 8px;
-                font-size: 14px;
-                letter-spacing: -0.2px;
-                font-weight: bold;
-            }
-
-            input {
-                width: 385px;
-                height: 48px;
-                background-color: $color-off-white;
-                border: none;
-                border-radius: 10px;
-                text-indent: 5%;
-                margin-bottom: 40px;
-            }
-        }
-
-
-        .form-group-password {
-            label {
-                margin-bottom: 8px;
-                font-size: 14px;
-                letter-spacing: -0.2px;
-                font-weight: bold;
-            }
-
-            input {
-                width: 360px;
-                height: 48px;
-                background-color: $color-off-white;
-                border: none;
-                border-radius: 10px;
-                text-indent: 5%;
-                margin-bottom: 40px;
-            }
-        }
-
-        .form-group-submit {
-            button {
-                width: 144px;
-                height: 44px;
-                background-color: $color-purple;
-                color: $color-cancel-white;
-                border: none;
-                border-radius: 10px;
-                font-size: 14px;
-                font-weight: 700;
-                margin-left: 21em;
-
-                &:active {
-                    background-color: $color-add-feedback-purple;
                 }
             }
         }
