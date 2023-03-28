@@ -10,14 +10,23 @@
         <div class="inner-container">
             <h1>Login</h1>
             <form id="login-form" class="form login-form" method="POST">
-                <div class="form-group-email">
+                <label class="input" for="email-login">
+                    <input class="input__field" id="email-login" type="text" placeholder=" " />
+                    <span class="input__label">Email Address</span>
+                </label>
+                <label class="input" for="password-login">
+                    <input class="input__field" id="password-login" type="text" placeholder=" " />
+                    <span class="input__label">Password</span>
+                </label>
+
+                {{!-- <div class="form-group-email">
                     <label for="email-login">email:</label>
                     <input class="form-input" type="text" id="email-login" />
                 </div>
                 <div class="form-group-password">
                     <label for="password-login">password:</label>
                     <input class="form-input" type="password" id="password-login" />
-                </div>
+                </div> --}}
                 <div class="button-container">
                     <a class="form-group-signup" href="/signup">Create Account</a>
                     <div class="form-group-login">
