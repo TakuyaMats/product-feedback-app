@@ -58,7 +58,7 @@
     // align-items: center; 
     background-color: $color-white;
     width: 500px;
-    height: 511px;
+    height: 550px;
     border-radius: 10px;
 
     .inner-container {
@@ -97,6 +97,52 @@
                 &__field {
                     box-sizing: border-box;
                     display: block;
+                    text-indent: 5%;
+                    width: 100%;
+                    height: 50px;
+                    font-weight: bold;
+                    border: 3px solid currentColor;
+                    padding: calc(.5 * 1.5) .5;
+                    color: currentColor;
+                    background: transparent;
+                    border-radius: 10px;
+                    
+                    &:focus,
+                    &:not(:placeholder-shown) {
+                        & + .input__label {
+                            transform: translate(.25rem, -65%) scale(.8);
+                            color: $color-signal;
+                        }
+                    }
+                }
+            }
+
+            .photo-input {
+                position: relative;
+                margin: 5px;
+
+                &__upload {
+                    position: absolute;
+                    left: 350px;
+                    top: 20px;
+                    padding: calc(.5rem * 0.75) calc(.5rem * .5);
+                    margin: calc(.5rem * 0.75 + 3px) calc(.5rem * .5);
+                    background: white;
+                    white-space: nowrap;
+                    transform: translate(0, 0);
+                    transform-origin: 0 0;
+                    background: var($color-light);
+                    transition: transform 120ms ease-in;
+                    font-weight: bold;
+                    line-height: 1.2;
+                    border-radius: 6px;
+                }
+
+                &__field {
+                    box-sizing: border-box;
+                    display: block;
+                    padding-top: 10px;
+                    top: 30px;
                     text-indent: 5%;
                     width: 100%;
                     height: 50px;
