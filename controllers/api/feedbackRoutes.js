@@ -72,7 +72,7 @@ router.post('/', withAuth, (req, res) => {
     Feedback.create({
             title: req.body.title,
             category: req.body.category,
-            status: req.body.status,
+            // status: req.body.status,
             description: req.body.description,
             user_id: req.session.user_id
         })
