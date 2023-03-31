@@ -662,15 +662,15 @@ body {
       width: 76px; }
       .detail-header .detail-btn .back-container img {
         margin-right: 5px; }
-      .detail-header .detail-btn .back-container input {
+      .detail-header .detail-btn .back-container a {
         text-decoration: none;
         border: none;
         background-color: #d3d5d7;
         font-weight: 700;
         font-size: 14px; }
-        .detail-header .detail-btn .back-container input:active {
+        .detail-header .detail-btn .back-container a:active {
           text-decoration: underline; }
-        .detail-header .detail-btn .back-container input:hover {
+        .detail-header .detail-btn .back-container a:hover {
           text-decoration: underline; }
     .detail-header .detail-btn .detail-edit-btn {
       background-color: #4661E6;

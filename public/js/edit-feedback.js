@@ -2,9 +2,8 @@ async function editFormHandler(event) {
     event.preventDefault();
 
     const title = document.querySelector('input[name="feedback-title"]').value.trim();
-    const category = document.querySelector('select[name="category"]').value;
-    const status = document.querySelector('select[name="status"]').value;
-    // const description = document.querySelector('input[name="feedback-detail]').value.trim();
+    const category = document.querySelector('select[name="category"]').value.toLowerCase();
+    const status = document.querySelector('select[name="status"]').value.toLowerCase();
     const description = document.querySelector('input[name="feedback-detail"]').value.trim();
 
 

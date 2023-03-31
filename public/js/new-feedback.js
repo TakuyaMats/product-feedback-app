@@ -2,7 +2,7 @@ async function newFormHandler(event) {
     event.preventDefault();
 
     const title = document.querySelector('input[name="feedback-title"]').value;
-    const category = document.querySelector('select[name="category"]').value;
+    const category = document.querySelector('select[name="category"]').value.toLowerCase();
     const description = document.querySelector('input[name="feedback-detail"]').value;
 
     const response = await fetch(`/api/feedbacks`, {
