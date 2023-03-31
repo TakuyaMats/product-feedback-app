@@ -2,18 +2,20 @@ async function editFormHandler(event) {
     event.preventDefault();
 
     const title = document.querySelector('input[name="feedback-title"]').value.trim();
-    const category = document.querySelector('#category option:checked').value;
-    const status = document.querySelector('#status option:checked').value;
-    const description = document.querySelector('input[name="feedback-description"]').value.trim();
+    const category = document.querySelector('select[name="category"]').value;
+    const status = document.querySelector('select[name="status"]').value;
+    // const description = document.querySelector('input[name="feedback-detail]').value.trim();
+    const description = document.querySelector('input[name="feedback-detail"]').value.trim();
+
 
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
 
-    const response = await fetch(`/feedback/${id}`, {
+    const response = await fetch(`/api/feedbacks/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
-            blog_id: id,
+            id: id,
             title,
             category,
             status,
@@ -24,6 +26,7 @@ async function editFormHandler(event) {
         }
     });
 
+    console.log(id, title, category, status, description);
     if (response.ok) {
         document.location.replace(`/feedback/${id}`);
     } else {
