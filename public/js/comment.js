@@ -1,3 +1,8 @@
+const commentInput = document.getElementById('comment');
+const charactersLeftText = document.querySelector('.characters-left');
+
+const MAX_COMMENT_LENGTH = 250;
+
 async function commentFormHandler(event) {
     event.preventDefault();
 
@@ -30,3 +35,9 @@ async function commentFormHandler(event) {
 }
 
 document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+
+commentInput.addEventListener('input', () => {
+    const commentLength = commentInput.value.length;
+    const charactersLeft = MAX_COMMENT_LENGTH - commentLength;
+    charactersLeftText.textContent = `${charactersLeft} Characters left`;
+});
