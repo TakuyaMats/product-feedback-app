@@ -34,38 +34,40 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Feedback.findOne({
-            where: {
-                id: req.params.id
-            },
-            attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
+        where: {
+            id: req.params.id
+        },
+        attributes: ['id', 'title', 'category', 'upvotes', 'status', 'description'],
+        include: [{
+            model: User,
+            attributes: ['username', 'name', 'email']
+        }, {
+            model: Comment,
+            attributes: ['id', 'content', 'feedback_id', 'user_id', 'reply_id'],
             include: [{
-                    model: User,
-                    attributes: ['username', 'name', 'email']
-                },
-                {
-                    model: Comment,
-                    attributes: ['id', 'content', 'feedback_id', 'user_id', 'reply_id'],
-                    include: [{
-                        model: User,
-                        attributes: ['username', 'name', 'email'],
-                    },{
-                        model: Reply,
-                        attributes: ['content', 'replyingTo']
-                    }]
-                }
-            ]
-        })
-        .then(feedbackData => {
-            if (!feedbackData) {
-                res.status(404).json({ message: 'No post found with this id' });
-                return;
-            }
-            res.json(feedbackData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+                model: User,
+                attributes: ['username', 'name', 'email'],
+            }, {
+                model: Reply,
+                attributes: ['content', 'replyingTo']
+            }]
+        }]
+    }).then(feedbackData => {
+        if (!feedbackData) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+        }
+        // pass the comments data to the template context
+        const context = {
+            feedback: feedbackData.toJSON(),
+            comments: feedbackData.Comment.map(comment => comment.toJSON())
+        };
+
+        res.render('single-feedback', context);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 router.post('/', withAuth, (req, res) => {

@@ -792,7 +792,9 @@ body {
         width: 456px;
         height: 48px;
         background-color: #F7F8FD;
-        border: none;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
         border-radius: 10px;
         text-indent: 5%; }
     .new-feedback-container .new-feedback-card .category-container {
@@ -806,7 +808,9 @@ body {
         width: 456px;
         height: 48px;
         background-color: #F7F8FD;
-        border: none;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
         border-radius: 10px;
         text-indent: 5%;
         appearance: none;
@@ -825,7 +829,9 @@ body {
         width: 456px;
         height: 96px;
         background-color: #F7F8FD;
-        border: none;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
         border-radius: 10px;
         text-indent: 5%; }
     .new-feedback-container .new-feedback-card .detail-footer {
@@ -901,9 +907,10 @@ body {
         width: 456px;
         height: 48px;
         background-color: #F7F8FD;
-        border: none;
         border-radius: 10px;
-        text-indent: 5%; }
+        text-indent: 5%;
+        border-style: solid;
+        border-color: black; }
     .edit-feedback-container .edit-feedback-card .category-container {
       width: 456px;
       height: 106px;
@@ -915,7 +922,9 @@ body {
         width: 456px;
         height: 48px;
         background-color: #F7F8FD;
-        border: none;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
         border-radius: 10px;
         text-indent: 5%;
         appearance: none;
@@ -934,7 +943,9 @@ body {
         width: 456px;
         height: 48px;
         background-color: #F7F8FD;
-        border: none;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
         border-radius: 10px;
         text-indent: 5%;
         appearance: none;
@@ -953,7 +964,8 @@ body {
         width: 456px;
         height: 96px;
         background-color: #F7F8FD;
-        border: none;
+        border-style: solid;
+        border-color: black;
         border-radius: 10px;
         text-indent: 5%; }
     .edit-feedback-container .edit-feedback-card .edit-feedback-footer {

@@ -1,6 +1,6 @@
 <div class="comments-container">
-    <h3 class="comments-header">2 Comments</h3>
-    {{#each this}}
+    <h3 class="comments-header">{{comments.length}} Comments</h3>
+    {{#each comments}}
     <div class="comments-card">
         <section class="comments-card-body">
             <img class="comments-profile-picture" src={{user.photo}}>
@@ -36,3 +36,4 @@
         {{/each}}
     {{/each}}
 </div>
+

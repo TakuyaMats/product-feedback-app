@@ -49,12 +49,10 @@
                 <option class="feedback-sort-options" data-column="comments" data-sort-direction="DESC" value="most comments" onselect="sortSelection('comments', 'DESC')">Most Comments</option>
                 <option class="feedback-sort-options" data-column="comments" data-sort-direction="ASC" value="least comments" onselect="sortSelection('comments', 'ASC')">Least Comments</option>
             </select>
-            {{!-- <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up"> --}}
             </form>
         </div>
         <div class="button-container">
             {{#if logged_in}}
-                {{!-- <button class="no-button" href="/" id="logout">logout</button> --}}
                 <button class="logout" type="submit">
                     <a id="logout" class="logout-link" href="/">Logout</a>
                 </button>

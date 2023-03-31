@@ -3,7 +3,6 @@
         <form class="detail-btn">
             <div class="back-container">
                 <img src="/css/shared/icon-arrow-left.svg">
-                {{!-- <input class="detail-back-btn" type="button" value="Go Back" onclick="history.back()"> --}}
                 <a href="/" class="detail-back-btn" onclick="history.back()">Go Back</a>
             </div>
             {{#if logged_in}}
@@ -17,7 +16,7 @@
         {{> feedback-info feedback}}
     </div>
     <div class="detail-comment-section">
-        {{> comments feedback.comments}}
+        {{> comments feedback}}
     </div>
     {{#if logged_in}}
         <div class="detail-feedback-card">
