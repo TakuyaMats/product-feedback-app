@@ -109,13 +109,13 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 router.delete('/:id', withAuth, (req, res) => {
-    Post.destroy({
+    Feedback.destroy({
         where: {
             id: req.params.id
         }
     }).then(feedbackData => {
         if (!feedbackData) {
-            res.status(404).json({ message: 'No post found with this id' });
+            res.status(404).json({ message: 'No feedback found with this id' });
             return;
         }
         res.json(feedbackData);
