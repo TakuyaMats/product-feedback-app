@@ -49,4 +49,6 @@ function attachUpvotesListeners() {
     });
 }
 
-attachUpvotesListeners();
+document.addEventListener('DOMContentLoaded', function() {
+    attachUpvotesListeners();
+});

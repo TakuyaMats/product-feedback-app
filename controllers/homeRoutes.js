@@ -124,12 +124,16 @@ router.get('/:category', (req, res) => {
 router.get('/sortBy/:column/:sortDirection', (req, res) => {
     const { column, sortDirection } = req.params;
 
+    console.log('column:', column);
+    console.log('sortDirection:', sortDirection);
+
     Feedback.findAll({
         order: [
             [ column, sortDirection ]
         ],
         attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
-            include: [{
+        include: [
+            {
                 model: Comment,
                 attributes: [ 'id', 'content', 'feedback_id', 'user_id' ],
                 include: {
@@ -142,7 +146,7 @@ router.get('/sortBy/:column/:sortDirection', (req, res) => {
                 attributes: ['username']
             }
         ]
-    })
+    })    
     .then(feedbackData => {
         const feedbacks = feedbackData.map(feedback => feedback.get({ plain: true }));
 
