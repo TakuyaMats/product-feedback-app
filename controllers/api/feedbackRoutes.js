@@ -85,6 +85,32 @@ router.post('/', withAuth, (req, res) => {
         });
 });
 
+// router.put('/:id/upvote', withAuth, (req, res) => {
+//     const { upvotes } = req.body.upvotes;
+//     const { id } = req.params.id;
+
+//     Feedback.update({ upvotes }, { where: { id } })
+//         .then(() => res.json({ success: true }))
+//         .catch(err => {
+//         console.log(err);
+//         res.status(500).json(err);
+//         });
+// });
+
+router.put('/:id/upvote', withAuth, (req, res) => {
+    Feedback.update({
+            upvotes: req.body.upvotes
+        }, {
+            where: {
+                id: req.params.id
+            }
+        }).then(() => res.json({ success: true }))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
 router.put('/:id', withAuth, (req, res) => {
     Feedback.update({
             title: req.body.title,

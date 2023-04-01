@@ -20,7 +20,8 @@ Feedback.init({
     },
     upvotes: {
         type: DataTypes.INTEGER,
-        allowNull: true,
+        allowNull: false,
+        defaultValue: 0
     },
     status: {
         type: DataTypes.STRING,

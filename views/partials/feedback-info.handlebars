@@ -1,8 +1,8 @@
 <div class="card-feedback">
     <div class="card-feedback-container">
-        <button class="feedback-upvotes">
+        <button class="feedback-upvotes" data-upvotes="{{upvotes}}">
             <img src="/css/shared/icon-arrow-up.svg">
-            {{upvotes}}
+            <span class="upvotes-count">{{upvotes}}</span>
         </button>
         <div class="feedback-body">
             <a class="feedback-title" href="/feedback/{{id}}"><h3>{{title}}</h3></a>
@@ -14,4 +14,5 @@
         <img src="/css/shared/icon-comments.svg">
         <p>{{comments.length}}</p>
     </button>
+    <script src="../js/upvotes.js"></script>
 </div>
