@@ -46,8 +46,8 @@
                     <img src="/css/shared/icon-arrow-up-white.svg" alt="arrow-up" class="arrow-up">
                 </option>
                 <option class="feedback-sort-options" data-column="upvotes" data-sort-direction="ASC" value="least upvotes" onselect="sortSelection('upvotes', 'ASC')">Least Upvotes</option>
-                <option class="feedback-sort-options" data-column="comments" data-sort-direction="DESC" value="most comments" onselect="sortSelection('comments', 'DESC')">Most Comments</option>
-                <option class="feedback-sort-options" data-column="comments" data-sort-direction="ASC" value="least comments" onselect="sortSelection('comments', 'ASC')">Least Comments</option>
+                {{!-- <option class="feedback-sort-options" data-column="comments" data-sort-direction="DESC" value="most comments">Most Comments</option>
+                <option class="feedback-sort-options" data-column="comments" data-sort-direction="ASC" value="least comments">Least Comments</option> --}}
             </select>
             </form>
         </div>
@@ -66,11 +66,26 @@
             </button>
         </div>
     </div>
-    <div class="main-feedback"> 
-        {{#each feedbacks as |feedback|}}
+    {{#if feedbacks.length}}
+        <div class="main-feedback"> 
+            {{#each feedbacks as |feedback|}}
             {{> feedback-info feedback}}
-        {{/each}}
-    </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <div class="main-no-feedback"> 
+            <div class="no-feedback-container">
+                <div class="content">
+                    <img src="/css/suggestions/illustration-empty.svg" alt="illustration-empty" class="illustration-empty">
+                    <h1>There is no feedback yet.</h1>
+                    <p>Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
+                    <button class="add-feedback" type="submit">
+                    <a class="add-feedback-link" href="/dashboard/new">+ Add Feedback</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    {{/if}}
 </div>
 {{#if logged_in}}
     <script src="/js/logout.js"></script>

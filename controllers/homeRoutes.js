@@ -109,11 +109,7 @@ router.get('/:category', (req, res) => {
 
         feedbacks = filteredFeedbackArr
         
-        if (feedbacks.length === 0) {
-            res.status(404).render('homepage-404')
-        } else {
-            res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
-        }
+        res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
     })
     .catch(err => {
         console.log(err);
@@ -121,15 +117,63 @@ router.get('/:category', (req, res) => {
     });
 });
 
+// router.get('/sortBy/:column/:sortDirection', (req, res) => {
+//     const { column, sortDirection } = req.params;
+
+//     console.log('column:', column);
+//     console.log('sortDirection:', sortDirection);
+
+//     Feedback.findAll({
+//         order: [
+//             [ column, sortDirection ]
+//         ],
+//         attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
+//         include: [
+//             {
+//                 model: Comment,
+//                 attributes: [ 'id', 'content', 'feedback_id', 'user_id' ],
+//                 include: {
+//                     model: User,
+//                     attributes: ['username']
+//                 }
+//             },
+//             {
+//                 model: User,
+//                 attributes: ['username']
+//             }
+//         ]
+//     })    
+//     .then(feedbackData => {
+//         const feedbacks = feedbackData.map(feedback => feedback.get({ plain: true }));
+
+//         let plannedCount = 0;
+//         let inProgressCount = 0;
+//         let liveCount = 0;
+
+//         feedbacks.forEach(feedback => {
+//             if (feedback.status === 'planned') {
+//                 plannedCount += 1;
+//             } else if (feedback.status === 'in progress') {
+//                 inProgressCount += 1;
+//             } else if (feedback.status === 'live') {
+//                 liveCount += 1;
+//             }
+//         });
+
+//         res.render('homepage', { feedbacks, plannedCount, inProgressCount, liveCount, logged_in: req.session.logged_in });
+//     })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).json(err);
+//     });
+// });
+
 router.get('/sortBy/:column/:sortDirection', (req, res) => {
     const { column, sortDirection } = req.params;
 
-    console.log('column:', column);
-    console.log('sortDirection:', sortDirection);
-
     Feedback.findAll({
         order: [
-            [ column, sortDirection ]
+            [ column, sortDirection ] // convert to uppercase for consistency
         ],
         attributes: [ 'id', 'title', 'category', 'upvotes', 'status', 'description'],
         include: [
@@ -171,6 +215,7 @@ router.get('/sortBy/:column/:sortDirection', (req, res) => {
         res.status(500).json(err);
     });
 });
+
 
 // reverse? include model Reply and include Comment?
 router.get('/feedback/:id', (req, res) => {
