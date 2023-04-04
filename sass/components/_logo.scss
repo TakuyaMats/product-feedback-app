@@ -20,3 +20,10 @@
         margin-left: 24px;
     }
 }
+
+@media screen and (max-width: $tablet) {
+    .main__sidebar-logo {
+        height: 213px;
+        margin-bottom: 0;
+    }
+}

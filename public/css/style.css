@@ -46,6 +46,11 @@ body {
     margin-bottom: 24px;
     margin-left: 24px; }
 
+@media screen and (max-width: 1061px) {
+  .main__sidebar-logo {
+    height: 213px;
+    margin-bottom: 0; } }
+
 .main__sidebar-category {
   text-align: start;
   width: 255px;
@@ -71,6 +76,10 @@ body {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .main__sidebar-category .category-all, .main__sidebar-category .category-ui, .main__sidebar-category .category-ux {
     margin-top: 24px; }
+
+@media screen and (max-width: 1061px) {
+  .main__sidebar-category {
+    margin-bottom: 0; } }
 
 .main__sidebar-roadmap {
   width: 255px;
@@ -107,6 +116,10 @@ body {
   .main__sidebar-roadmap .live::marker {
     color: #628CFA;
     width: 8px; }
+
+@media screen and (max-width: 1061px) {
+  .main__sidebar-roadmap {
+    height: 213px; } }
 
 .main-header {
   display: flex;
@@ -185,6 +198,10 @@ body {
       color: #F2F4FE; }
     .main-header .logout:active {
       background-color: #C75AF6; }
+
+@media screen and (max-width: 1061px) {
+  .main-header {
+    margin-bottom: 0; } }
 
 .card-feedback {
   height: 151px;
@@ -567,31 +584,6 @@ body {
   grid-area: feedback;
   margin-right: 75px; }
 
-.grid-container {
-  display: grid;
-  grid-template-areas: 'sidebar header header header header' 'sidebar feedback feedback feedback feedback';
-  gap: 10px;
-  padding: 10px;
-  padding-top: 40px; }
-
-.main-sidebar {
-  grid-area: sidebar;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  flex-direction: column; }
-
-.main-category {
-  grid-area: category; }
-
-.main-roadmap {
-  grid-area: roadmap; }
-
-.main-header {
-  grid-area: header;
-  margin-right: 75px; }
-
 .main-no-feedback {
   grid-area: feedback;
   background-color: white;
@@ -638,6 +630,30 @@ body {
   gap: 10px;
   padding: 10px;
   padding-top: 40px; }
+
+@media screen and (max-width: 1061px) {
+  .main-sidebar {
+    grid-area: sidebar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px; }
+  .grid-container {
+    display: grid;
+    grid-template-areas: 'sidebar' 'header' 'feedback';
+    gap: 10px;
+    padding: 10px;
+    padding-top: 40px;
+    justify-content: center; }
+  .main-no-feedback {
+    margin-right: 0; }
+  .main-header {
+    margin-right: 0; }
+  .main-feedback {
+    margin-right: 0; } }
 
 .detail-feedback {
   grid-area: feedback; }

@@ -52,3 +52,10 @@
         width: 8px;
     }
 }
+
+
+@media screen and (max-width: $tablet) {
+    .main__sidebar-roadmap {
+        height: 213px;
+    }
+}

@@ -39,19 +39,8 @@ $color-accent: var(--color-signal);
 $size-bezel: .5rem;
 $size-radius: 4px;
 
-// BODY
-// $body-one: (
-//     font-size: 16px,
-//     font-family: 'Jost Regular', sans-serif,
-//     line-height: 23px
-// );
-// $body-two: (
-//     font-size: 15px,
-//     font-family: 'Jost Regular', sans-serif,
-//     line-height: 22px
-// );
-// $body-three: (
-//     font-size: 13px,
-//     font-family: 'Jost Semibold', sans-serif,
-//     line-height: 19px
-// );
+// Breakpoints
+$mobile: 480px;
+$tablet: 1061px;
+$desktop: 1200px;
+
