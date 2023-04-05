@@ -353,7 +353,9 @@ body {
       border-radius: 10px;
       background-color: #F2F4FF;
       border: none;
-      margin-bottom: 16px; }
+      margin-bottom: 16px;
+      color: #4661E6;
+      font-weight: 600; }
     .planned-card-container .container .planned-footer {
       display: flex;
       justify-content: space-between;
@@ -384,6 +386,17 @@ body {
         height: 23px;
         border: none;
         background-color: #FFFFFF; }
+
+@media screen and (max-width: 1061px) {
+  .planned-card-container {
+    width: 223px;
+    height: 261px; }
+  .planned-body .title h3 {
+    font-size: 13px; }
+  .planned-body .description {
+    font-size: 13px;
+    text-align: start;
+    color: #647196; } }
 
 .inProgress-card-container {
   width: 350px;
@@ -420,7 +433,9 @@ body {
       border-radius: 10px;
       background-color: #F2F4FF;
       border: none;
-      margin-bottom: 16px; }
+      margin-bottom: 16px;
+      color: #4661E6;
+      font-weight: 600; }
     .inProgress-card-container .container .inProgress-footer {
       display: flex;
       justify-content: space-between;
@@ -451,6 +466,17 @@ body {
         height: 23px;
         border: none;
         background-color: #FFFFFF; }
+
+@media screen and (max-width: 1061px) {
+  .inProgress-card-container {
+    width: 223px;
+    height: 261px; }
+  .inProgress-body .title h3 {
+    font-size: 13px; }
+  .inProgress-body .description {
+    font-size: 13px;
+    text-align: start;
+    color: #647196; } }
 
 .live-card-container {
   width: 350px;
@@ -487,7 +513,9 @@ body {
       border-radius: 10px;
       background-color: #F2F4FF;
       border: none;
-      margin-bottom: 16px; }
+      margin-bottom: 16px;
+      color: #4661E6;
+      font-weight: 600; }
     .live-card-container .container .live-footer {
       display: flex;
       justify-content: space-between;
@@ -518,6 +546,17 @@ body {
         height: 23px;
         border: none;
         background-color: #FFFFFF; }
+
+@media screen and (max-width: 1061px) {
+  .live-card-container {
+    width: 223px;
+    height: 261px; }
+  .live-body .title h3 {
+    font-size: 13px; }
+  .live-body .description {
+    font-size: 13px;
+    text-align: start;
+    color: #647196; } }
 
 .reply-card {
   margin: 5px;
@@ -1026,18 +1065,24 @@ body {
   .roadmap-planned h2 {
     margin-top: 2em;
     margin-bottom: 4px; }
+  .roadmap-planned p {
+    color: #647196; }
 
 .roadmap-in-progress {
   grid-area: in-progress; }
   .roadmap-in-progress h2 {
     margin-top: 2em;
     margin-bottom: 4px; }
+  .roadmap-in-progress p {
+    color: #647196; }
 
 .roadmap-live {
   grid-area: live; }
   .roadmap-live h2 {
     margin-top: 2em;
     margin-bottom: 4px; }
+  .roadmap-live p {
+    color: #647196; }
 
 .roadmap-grid-container {
   display: grid;
@@ -1090,6 +1135,16 @@ body {
       color: #F2F4FE; }
     .roadmap-main-header .add-feedback-btn:active {
       background-color: #C75AF6; }
+
+@media screen and (max-width: 1061px) {
+  .roadmap-planned h2,
+  .roadmap-in-progress h2,
+  .roadmap-live h2 {
+    font-size: 14px; }
+  .roadmap-planned p,
+  .roadmap-in-progress p,
+  .roadmap-live p {
+    font-size: 14px; } }
 
 .login-grid-container {
   display: flex;

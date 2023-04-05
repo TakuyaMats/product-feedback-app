@@ -9,6 +9,10 @@
         margin-top: 2em;
         margin-bottom: 4px;
     }
+
+    p {
+        color: $color-dark-grey;
+    }
 };
 
 .roadmap-in-progress {
@@ -18,6 +22,10 @@
         margin-top: 2em;
         margin-bottom: 4px;
     }
+
+    p {
+        color: $color-dark-grey;
+    }
 };
 
 .roadmap-live {
@@ -26,6 +34,10 @@
     h2 {
         margin-top: 2em;
         margin-bottom: 4px;
+    }
+
+    p {
+        color: $color-dark-grey;
     }
 };
 
@@ -101,4 +113,18 @@
             background-color: $color-add-feedback-purple;
         }
     }
+}
+
+@media screen and (max-width: $tablet) {
+    .roadmap-planned,
+    .roadmap-in-progress,
+    .roadmap-live {
+        h2 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    };
 }
