@@ -110,3 +110,28 @@
         margin-bottom: 0;
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .main-header {
+        .login {
+            width: 80px;
+            height: 40px;
+        }
+
+        .add-feedback {
+            width: 134px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 16px;
+            border: none;
+        }
+
+        .header-container {
+            label {
+                margin-left: 15px;
+            }
+        }
+    }
+}

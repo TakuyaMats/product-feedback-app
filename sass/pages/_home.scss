@@ -115,3 +115,25 @@
         margin-right: 0;
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .main__sidebar-category,
+    .main__sidebar-roadmap,
+    .header-icon,
+    .header-suggestions {
+        display: none; /* Hide the containers by default */
+    }
+
+    .active {
+        display: block !important; /* Show the containers when the "active" class is added */
+    }
+
+    .main-sidebar { 
+        margin-bottom: 0;
+    }
+
+    .grid-container {
+        gap: 0;
+        padding-top: 0;
+    }
+}

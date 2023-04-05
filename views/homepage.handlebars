@@ -1,8 +1,15 @@
 <div class="grid-container">
     <div class="main-sidebar">
         <div class="main__sidebar-logo">
-            <h2>Frontend Mentor</h2>
-            <p>Feedback Board</p>
+            <div class="main-title">
+                <h2>Frontend Mentor</h2>
+                <p>Feedback Board</p>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-menu-line"></div>
+                <div class="burger-menu-line"></div>
+                <div class="burger-menu-line"></div>
+            </div>
         </div>
         <div class="main__sidebar-category" id="categoryBtnContainer">
             <button class="btn category-all active" onclick="filterSelection('all')">All</button>
@@ -37,8 +44,8 @@
     </div>
     <div class="main-header">
         <div class="header-container">
-            <img src="/css/suggestions/icon-suggestions.svg" alt="light-bulb" class="light-bulb">
-            <h3>{{feedbacks.length}} Suggestions</h3>
+            <img class="header-icon" src="/css/suggestions/icon-suggestions.svg" alt="light-bulb" class="light-bulb">
+            <h3 class="header-suggestions">{{feedbacks.length}} Suggestions</h3>
             <form action="/action_page.php">
             <label for="feedback-filter">Sort by:</label>
             <select name="feedback-filter" class="feedback-filter" id="feedback-filter">
@@ -87,6 +94,9 @@
         </div>
     {{/if}}
 </div>
+
+<script src="/js/burgermenu.js"></script>
+
 {{#if logged_in}}
     <script src="/js/logout.js"></script>
 {{/if}}
