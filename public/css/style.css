@@ -58,9 +58,11 @@ body {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 72px; }
-    .main__sidebar-logo main-title {
-      margin-left: 34px; }
+    height: 72px;
+    border-radius: 0;
+    z-index: 2; }
+    .main__sidebar-logo .main-title {
+      margin-left: 15px; }
     .main__sidebar-logo h2 {
       margin-top: 33px;
       font-size: 15px; }
@@ -113,8 +115,27 @@ body {
   .main__sidebar-category {
     margin-bottom: 0; } }
 
+@media screen and (max-width: 480px) {
+  .main__sidebar-category {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-right: 12px; }
+    .main__sidebar-category button {
+      width: auto;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 12px;
+      font-size: 11px; }
+    .main__sidebar-category .category-all, .main__sidebar-category .category-ui, .main__sidebar-category .category-ux {
+      margin-top: 14px; } }
+
 .main__sidebar-roadmap {
+  display: flex;
+  flex-direction: column;
   width: 255px;
+  height: 178px;
   background-color: #FFFFFF;
   border-radius: 10px; }
   .main__sidebar-roadmap li::marker {
@@ -151,7 +172,8 @@ body {
 
 @media screen and (max-width: 1061px) {
   .main__sidebar-roadmap {
-    height: 213px; } }
+    height: 213px;
+    margin-right: 12px; } }
 
 .main-header {
   display: flex;
@@ -167,7 +189,8 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 2em; }
+    gap: 2em;
+    margin-left: 24px; }
     .main-header .header-container .light-bulb {
       margin-left: 24px; }
     .main-header .header-container label {
@@ -236,19 +259,23 @@ body {
     margin-bottom: 0; } }
 
 @media screen and (max-width: 480px) {
-  .main-header .login {
-    width: 80px;
-    height: 40px; }
-  .main-header .add-feedback {
-    width: 134px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 700;
-    margin-right: 16px;
-    border: none; }
-  .main-header .header-container label {
-    margin-left: 15px; } }
+  .main-header {
+    border-radius: 0; }
+    .main-header .login {
+      width: 40px;
+      height: 40px; }
+      .main-header .login a {
+        font-size: 10px; }
+    .main-header .add-feedback {
+      width: 90px;
+      height: 40px;
+      border-radius: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-right: 16px;
+      border: none; }
+    .main-header .header-container label {
+      margin-left: 28px; } }
 
 .card-feedback {
   height: 151px;
@@ -315,6 +342,31 @@ body {
     background-color: #FFFFFF; }
     .card-feedback .card-feedback-content img {
       margin-right: 12px; }
+
+@media screen and (max-width: 480px) {
+  .card-feedback {
+    margin: 24px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px; }
+    .card-feedback .feedback-upvotes {
+      width: 35px;
+      height: 50px;
+      font-size: 11px; }
+    .card-feedback .feedback-body {
+      margin-top: 10px;
+      width: 190px; }
+      .card-feedback .feedback-body h3 {
+        font-size: 13px; }
+      .card-feedback .feedback-body p {
+        font-size: 13px; }
+      .card-feedback .feedback-body button {
+        font-size: 11px; }
+  .card-feedback-container {
+    display: flex;
+    flex-direction: column; } }
 
 .comments-container {
   display: flex;
@@ -727,6 +779,12 @@ body {
     flex-direction: row;
     gap: 10px;
     margin-bottom: 20px; }
+    .main-sidebar .side-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px; }
   .grid-container {
     display: grid;
     grid-template-areas: 'sidebar' 'header' 'feedback';
@@ -752,10 +810,24 @@ body {
     display: block !important;
     /* Show the containers when the "active" class is added */ }
   .main-sidebar {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    gap: 0; }
   .grid-container {
     gap: 0;
-    padding-top: 0; } }
+    padding-top: 0;
+    padding: 0; }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 1;
+    transition: right 0.3s ease-in-out; }
+  .side-menu.show {
+    flex-direction: column;
+    right: 0; } }
 
 .detail-feedback {
   grid-area: feedback; }

@@ -1,5 +1,8 @@
 .main__sidebar-roadmap {
+    display: flex;
+    flex-direction: column;
     width: 255px;
+    height: 178px;
     background-color: $color-white;
     border-radius: 10px;
 
@@ -57,5 +60,6 @@
 @media screen and (max-width: $tablet) {
     .main__sidebar-roadmap {
         height: 213px;
+        margin-right: 12px;
     }
 }

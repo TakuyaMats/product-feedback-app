@@ -89,3 +89,44 @@
         }
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .card-feedback {
+        margin: 24px;
+        height: 200px;
+
+        display: flex;
+        justify-content: space-between;
+        // flex-direction: column-reverse;
+        align-items: center;
+        border-radius: 10px;
+
+        .feedback-upvotes {
+            width: 35px;
+            height: 50px;
+            font-size: 11px;
+        }
+
+        .feedback-body {
+            margin-top: 10px;
+            width: 190px;
+    
+            h3 {
+                font-size: 13px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            button {
+                font-size: 11px;
+            }
+        }
+    }
+
+    .card-feedback-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

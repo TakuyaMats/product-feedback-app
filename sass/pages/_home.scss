@@ -89,6 +89,14 @@
         flex-direction: row;
         gap: 10px;
         margin-bottom: 20px;
+
+        .side-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+        }
     }
 
     .grid-container {
@@ -130,10 +138,28 @@
 
     .main-sidebar { 
         margin-bottom: 0;
+        gap: 0;
     }
 
     .grid-container {
         gap: 0;
         padding-top: 0;
+        padding: 0;
+    }
+
+    .side-menu {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: #f2f2f2;
+        z-index: 1;
+        transition: right 0.3s ease-in-out;
+    }
+    
+    .side-menu.show {
+        flex-direction: column;
+        right: 0;
     }
 }

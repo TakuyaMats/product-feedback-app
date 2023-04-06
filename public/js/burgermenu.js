@@ -4,6 +4,7 @@ const burgerMenu = document.querySelector('.burger-menu');
 // Get the "main__sidebar-category" and "main__sidebar-roadmap" containers
 const categoryContainer = document.querySelector('.main__sidebar-category');
 const roadmapContainer = document.querySelector('.main__sidebar-roadmap');
+const sideMenu = document.querySelector('.side-menu');
 
 
 console.log(categoryContainer);
@@ -15,4 +16,5 @@ burgerMenu.addEventListener('click', () => {
     // Toggle the visibility of the "main__sidebar-category" and "main__sidebar-roadmap" containers
     categoryContainer.classList.toggle('active');
     roadmapContainer.classList.toggle('active');
+    sideMenu.classList.toggle('show');
 });

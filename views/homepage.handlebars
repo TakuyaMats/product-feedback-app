@@ -11,34 +11,36 @@
                 <div class="burger-menu-line"></div>
             </div>
         </div>
-        <div class="main__sidebar-category" id="categoryBtnContainer">
-            <button class="btn category-all active" onclick="filterSelection('all')">All</button>
-            <button class="btn category-ui" onclick="filterSelection('ui')">UI</button>
-            <button class="btn category-ux" onclick="filterSelection('ux')">UX</button>
-            <button class="btn category-enhancement" onclick="filterSelection('enhancement')">Enhancement</button>
-            <button class="btn category-bug" onclick="filterSelection('bug')">Bug</button>
-            <button class="btn category-feature" onclick="filterSelection('feature')">Feature</button>
-        </div>
-        <div class="main__sidebar-roadmap">
-            <div class="roadmap__header">
-                <h3>Roadmap</h3>
-                <a class="roadmap__header-link" href="/roadmap">View</a>
+        <div class="side-menu">
+            <div class="main__sidebar-category" id="categoryBtnContainer">
+                <button class="btn category-all active" onclick="filterSelection('all')">All</button>
+                <button class="btn category-ui" onclick="filterSelection('ui')">UI</button>
+                <button class="btn category-ux" onclick="filterSelection('ux')">UX</button>
+                <button class="btn category-enhancement" onclick="filterSelection('enhancement')">Enhancement</button>
+                <button class="btn category-bug" onclick="filterSelection('bug')">Bug</button>
+                <button class="btn category-feature" onclick="filterSelection('feature')">Feature</button>
             </div>
-            <div class="roadmap__bulletin">
-                <ul class="bulletin-container">
-                    <div class="container-planned">
-                        <li class="planned">Planned</li>
-                        <div>{{plannedCount}}</div>
-                    </div>
-                    <div class="container-in-progress">
-                        <li class="in-progress">In-Progress</li>
-                        <div>{{inProgressCount}}</div>
-                    </div>
-                    <div class="container-live">
-                        <li class="live">Live</li>
-                        <div>{{liveCount}}</div>
-                    </div>
-                </ul>
+            <div class="main__sidebar-roadmap">
+                <div class="roadmap__header">
+                    <h3>Roadmap</h3>
+                    <a class="roadmap__header-link" href="/roadmap">View</a>
+                </div>
+                <div class="roadmap__bulletin">
+                    <ul class="bulletin-container">
+                        <div class="container-planned">
+                            <li class="planned">Planned</li>
+                            <div>{{plannedCount}}</div>
+                        </div>
+                        <div class="container-in-progress">
+                            <li class="in-progress">In-Progress</li>
+                            <div>{{inProgressCount}}</div>
+                        </div>
+                        <div class="container-live">
+                            <li class="live">Live</li>
+                            <div>{{liveCount}}</div>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

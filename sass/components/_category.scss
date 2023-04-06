@@ -4,6 +4,9 @@
     background-color: $color-white;
     border-radius: 10px;
     margin-bottom: 24px;
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
 
     button {
         display: inline-block;
@@ -36,5 +39,28 @@
 @media screen and (max-width: $tablet) {
     .main__sidebar-category {
         margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .main__sidebar-category {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 10px;
+        height: auto;
+        margin-right: 12px;
+
+        button {
+            width: auto;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 12px;
+            font-size: 11px;
+        }
+
+        .category-all, .category-ui, .category-ux {
+            margin-top: 14px;
+        }
     }
 }
