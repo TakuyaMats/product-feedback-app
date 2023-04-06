@@ -71,5 +71,27 @@
         background-color: $color-white;
         margin: 1px;
         border-radius: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .burger-menu.active .burger-menu-line {
+        transform: scale(0.8);
+        height: 5.3px; /* add this line to compensate for scaling */
+    }
+
+    .burger-menu-line.middle {
+        transition-delay: 0.15s;
+    }
+    
+    .burger-menu.active .burger-menu-line.middle {
+        opacity: 0;
+    }
+
+    .burger-menu.active .burger-menu-line.top {
+        transform: translateY(calc(8px - 0.5 * 3px)) scale(0.8) rotate(45deg);
+    }
+    
+    .burger-menu.active .burger-menu-line.bottom {
+        transform: translateY(calc(-8px + 0.5 * 3px)) scale(0.8) rotate(-45deg);
     }
 }

@@ -1,5 +1,6 @@
 // Get the burger menu icon element
 const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenuLines = document.querySelectorAll('.burger-menu-line');
 
 // Get the "main__sidebar-category" and "main__sidebar-roadmap" containers
 const categoryContainer = document.querySelector('.main__sidebar-category');
