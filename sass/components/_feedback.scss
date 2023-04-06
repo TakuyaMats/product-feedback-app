@@ -92,12 +92,10 @@
 
 @media screen and (max-width: $mobile) {
     .card-feedback {
-        margin: 24px;
+        // margin: 24px;
         height: 200px;
-
         display: flex;
         justify-content: space-between;
-        // flex-direction: column-reverse;
         align-items: center;
         border-radius: 10px;
 
