@@ -129,11 +129,11 @@
     .main__sidebar-roadmap,
     .header-icon,
     .header-suggestions {
-        display: none; /* Hide the containers by default */
+        display: none;
     }
 
     .active {
-        display: block !important; /* Show the containers when the "active" class is added */
+        display: block !important;
     }
 
     .main-sidebar { 
@@ -145,6 +145,8 @@
         gap: 0;
         padding-top: 0;
         padding: 0;
+        width: 100%;
+        justify-content: revert;
     }
 
     .side-menu {
@@ -161,5 +163,32 @@
     .side-menu.show {
         flex-direction: column;
         right: 0;
+    }
+
+    .main-no-feedback {
+        border-radius: 0;
+        margin-top: 0;
+        width: 100%;
+
+        .no-feedback-container {
+            .content {
+                text-align: center;
+                width: 278px;
+                margin-top: 50px;
+
+                h1 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: $color-dark-grey;
+                }
+
+                button {
+                    width: 134px;
+                }
+            }
+        }
     }
 }

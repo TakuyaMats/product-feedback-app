@@ -87,8 +87,7 @@ body {
     transition: transform 0.3s ease; }
   .burger-menu.active .burger-menu-line {
     transform: scale(0.8);
-    height: 5.3px;
-    /* add this line to compensate for scaling */ }
+    height: 5.3px; }
   .burger-menu-line.middle {
     transition-delay: 0.15s; }
   .burger-menu.active .burger-menu-line.middle {
@@ -286,9 +285,7 @@ body {
       font-size: 10px;
       font-weight: 700;
       margin-right: 16px;
-      border: none; }
-    .main-header .header-container label {
-      margin-left: 28px; } }
+      border: none; } }
 
 .card-feedback {
   height: 151px;
@@ -817,18 +814,18 @@ body {
   .main__sidebar-roadmap,
   .header-icon,
   .header-suggestions {
-    display: none;
-    /* Hide the containers by default */ }
+    display: none; }
   .active {
-    display: block !important;
-    /* Show the containers when the "active" class is added */ }
+    display: block !important; }
   .main-sidebar {
     margin-bottom: 0;
     gap: 0; }
   .grid-container {
     gap: 0;
     padding-top: 0;
-    padding: 0; }
+    padding: 0;
+    width: 100%;
+    justify-content: revert; }
   .side-menu {
     position: fixed;
     top: 0;
@@ -840,7 +837,22 @@ body {
     transition: right 0.3s ease-in-out; }
   .side-menu.show {
     flex-direction: column;
-    right: 0; } }
+    right: 0; }
+  .main-no-feedback {
+    border-radius: 0;
+    margin-top: 0;
+    width: 100%; }
+    .main-no-feedback .no-feedback-container .content {
+      text-align: center;
+      width: 278px;
+      margin-top: 50px; }
+      .main-no-feedback .no-feedback-container .content h1 {
+        font-size: 18px; }
+      .main-no-feedback .no-feedback-container .content p {
+        font-size: 13px;
+        color: #647196; }
+      .main-no-feedback .no-feedback-container .content button {
+        width: 134px; } }
 
 .detail-feedback {
   grid-area: feedback; }
