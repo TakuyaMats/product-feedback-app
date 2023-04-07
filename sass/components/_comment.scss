@@ -68,9 +68,36 @@
                 
                 .comments-content {
                     font-size: 15px;
+                    display: block;
                 }
             }
+        }
+
+        .comments-content-mobile {
+            display: none;
         }
     }
 }
 
+
+@media screen and (max-width: $mobile) {
+    .comments-container {
+        gap: 2em;
+        .comments-card {
+            width: 280px;
+            .comments-card-body {
+                gap: 1em;
+                .comments-section {
+                    .comments-content {
+                        display: none;
+                    }
+                }
+            }
+            .comments-content-mobile {
+                font-size: 13px;
+                display: block;
+                height: 95px;
+            }
+        }
+    }
+}

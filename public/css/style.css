@@ -278,6 +278,11 @@ body {
       height: 40px; }
       .main-header .login a {
         font-size: 10px; }
+    .main-header .logout {
+      width: 45px;
+      height: 40px; }
+      .main-header .logout a {
+        font-size: 10px; }
     .main-header .add-feedback {
       width: 90px;
       height: 40px;
@@ -359,7 +364,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 10px; }
+    width: 100vw; }
     .card-feedback .feedback-upvotes {
       width: 35px;
       height: 50px;
@@ -424,7 +429,24 @@ body {
           margin-top: 2px;
           font-weight: 400; }
         .comments-container .comments-card .comments-card-body .comments-section .comments-content {
-          font-size: 15px; }
+          font-size: 15px;
+          display: block; }
+    .comments-container .comments-card .comments-content-mobile {
+      display: none; }
+
+@media screen and (max-width: 480px) {
+  .comments-container {
+    gap: 2em; }
+    .comments-container .comments-card {
+      width: 280px; }
+      .comments-container .comments-card .comments-card-body {
+        gap: 1em; }
+        .comments-container .comments-card .comments-card-body .comments-section .comments-content {
+          display: none; }
+      .comments-container .comments-card .comments-content-mobile {
+        font-size: 13px;
+        display: block;
+        height: 95px; } }
 
 .planned-card-container {
   width: 350px;
@@ -707,7 +729,21 @@ body {
         margin-top: 2px;
         font-weight: 400; }
       .reply-card .reply-card-body .reply-section .reply-content {
-        font-size: 15px; }
+        font-size: 15px;
+        display: block; }
+  .reply-card .reply-content-mobile {
+    display: none; }
+
+@media screen and (max-width: 480px) {
+  .reply-card {
+    width: 280px; }
+    .reply-card .reply-card-body .reply-section .reply-content {
+      font-size: 15px;
+      display: none; }
+    .reply-card .reply-content-mobile {
+      font-size: 13px;
+      display: block;
+      height: 95px; } }
 
 .main-sidebar {
   grid-area: sidebar;
@@ -948,6 +984,45 @@ body {
         font-size: 14px; }
         .detail-feedback-card form .comment-footer button:active {
           background-color: #C75AF6; }
+
+@media screen and (max-width: 480px) {
+  .feedback-detail-container {
+    display: grid;
+    justify-content: revert;
+    grid-template-areas: 'header' 'feedback' 'comment-section' 'feedback-card';
+    gap: 25px;
+    padding: 0;
+    padding-top: 10px; }
+  .detail-header {
+    grid-area: header;
+    width: 100vw; }
+    .detail-header .detail-btn .back-container {
+      margin-left: 15px; }
+    .detail-header .detail-btn .detail-edit-btn {
+      width: 119px;
+      height: 40px; }
+      .detail-header .detail-btn .detail-edit-btn a {
+        font-size: 13px;
+        font-weight: 700; }
+      .detail-header .detail-btn .detail-edit-btn:active {
+        background-color: #7C91F9; }
+  .detail-comment-section {
+    width: 100vw; }
+  .detail-feedback-card {
+    height: 234px;
+    width: 100vw; }
+    .detail-feedback-card form input {
+      width: 320px; }
+  .detail-feedback-card .feedback-card-body .comment-footer {
+    align-items: center; }
+    .detail-feedback-card .feedback-card-body .comment-footer p {
+      font-weight: 400;
+      font-size: 13px;
+      color: #647196; }
+    .detail-feedback-card .feedback-card-body .comment-footer button {
+      width: 119px;
+      height: 40px;
+      font-size: 13px; } }
 
 .new-feedback-container {
   display: flex;

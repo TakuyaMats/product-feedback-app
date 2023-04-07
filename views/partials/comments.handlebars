@@ -14,6 +14,7 @@
             <button class="reply" id="main-comment-reply">Reply</button>
         </section>
         <hr>
+        <p class="comments-content-mobile">{{content}}</p>
     </div>
         {{#each replies}}
             <div class="reply-card">
@@ -32,6 +33,10 @@
                     <button class="reply">Reply</button>
                 </section>
                 <hr>
+                <p class="reply-content-mobile"> 
+                    @{{replyingTo}} 
+                    {{content}}
+                </p>
             </div>
         {{/each}}
     {{/each}}

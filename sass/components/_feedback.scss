@@ -97,7 +97,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-radius: 10px;
+        // border-radius: 0;
+        // width: 326px;
+        width: 100vw;
 
         .feedback-upvotes {
             width: 35px;

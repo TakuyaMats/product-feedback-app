@@ -58,9 +58,32 @@
 
             .reply-content {
                 font-size: 15px;
+                display: block;
             }
         }
+    }
+
+    .reply-content-mobile {
+        display: none;
     }
 }
 
 
+@media screen and (max-width: $mobile) {
+        .reply-card {
+            width: 280px;
+            .reply-card-body {
+                .reply-section {
+                    .reply-content {
+                        font-size: 15px;
+                        display: none;
+                    }
+            }
+        }
+        .reply-content-mobile {
+            font-size: 13px;
+            display: block;
+            height: 95px;
+        }
+    }
+}
