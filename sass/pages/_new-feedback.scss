@@ -184,3 +184,90 @@
 }
 
 
+@media screen and (max-width: $mobile) {
+    .new-feedback-container {
+        .new-feedback-header {
+            width: 90vw;
+        }
+
+        .new-feedback-card {
+            width: 327px;
+            height: 708px;
+            h1 {
+                margin-bottom: 40px;
+                font-size: 18px;
+            }
+            
+            .title-container {
+                width: 456px;
+                height: 106px;
+                label {
+                    h4 {
+                        font-size: 13px;
+                    }
+                    p {
+                        font-size: 13px;
+                        color: $color-dark-grey;
+                    }
+                }
+                input {
+                    width: 285px;
+                }
+            }
+
+            .category-container {
+                width: 456px;
+                label {
+                    h4 {
+                        font-size: 13px;
+                    }
+                    p {
+                        font-size: 13px;
+                        color: $color-dark-grey;
+                    }
+                }
+    
+                select {
+                    width: 285px;
+                    height: 48px;
+                }
+            }
+    
+            .detail-container {
+                width: 285px;
+                height: 154px;
+                label {
+                    h4 {
+                        font-size: 13px;
+                    }
+                    p {
+                        font-size: 13px;
+                        color: $color-dark-grey;
+                    }
+                }
+    
+                input {
+                    width: 285px;
+                    height: 96px;
+                }
+            }
+    
+            .detail-footer {
+                display: flex;
+                justify-content: center;
+                flex-direction: column-reverse;
+                gap: 1em;
+    
+                input {
+                    width: 285px;
+                    height: 44px;
+                }
+    
+                button {
+                    width: 285px;
+                    height: 44px;
+                }
+            }
+        }
+    }
+}

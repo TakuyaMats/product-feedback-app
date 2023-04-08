@@ -1147,6 +1147,58 @@ body {
         .new-feedback-container .new-feedback-card .detail-footer button:active {
           background-color: #C75AF6; }
 
+@media screen and (max-width: 480px) {
+  .new-feedback-container .new-feedback-header {
+    width: 90vw; }
+  .new-feedback-container .new-feedback-card {
+    width: 327px;
+    height: 708px; }
+    .new-feedback-container .new-feedback-card h1 {
+      margin-bottom: 40px;
+      font-size: 18px; }
+    .new-feedback-container .new-feedback-card .title-container {
+      width: 456px;
+      height: 106px; }
+      .new-feedback-container .new-feedback-card .title-container label h4 {
+        font-size: 13px; }
+      .new-feedback-container .new-feedback-card .title-container label p {
+        font-size: 13px;
+        color: #647196; }
+      .new-feedback-container .new-feedback-card .title-container input {
+        width: 285px; }
+    .new-feedback-container .new-feedback-card .category-container {
+      width: 456px; }
+      .new-feedback-container .new-feedback-card .category-container label h4 {
+        font-size: 13px; }
+      .new-feedback-container .new-feedback-card .category-container label p {
+        font-size: 13px;
+        color: #647196; }
+      .new-feedback-container .new-feedback-card .category-container select {
+        width: 285px;
+        height: 48px; }
+    .new-feedback-container .new-feedback-card .detail-container {
+      width: 285px;
+      height: 154px; }
+      .new-feedback-container .new-feedback-card .detail-container label h4 {
+        font-size: 13px; }
+      .new-feedback-container .new-feedback-card .detail-container label p {
+        font-size: 13px;
+        color: #647196; }
+      .new-feedback-container .new-feedback-card .detail-container input {
+        width: 285px;
+        height: 96px; }
+    .new-feedback-container .new-feedback-card .detail-footer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+      gap: 1em; }
+      .new-feedback-container .new-feedback-card .detail-footer input {
+        width: 285px;
+        height: 44px; }
+      .new-feedback-container .new-feedback-card .detail-footer button {
+        width: 285px;
+        height: 44px; } }
+
 .edit-feedback-container {
   display: flex;
   justify-content: center;
