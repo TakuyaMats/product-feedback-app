@@ -1344,6 +1344,98 @@ body {
         .edit-feedback-container .edit-feedback-card .edit-feedback-footer .add-btn:active {
           background-color: #C75AF6; }
 
+@media screen and (max-width: 480px) {
+  .edit-feedback-container .edit-feedback-header {
+    width: 90vw; }
+  .edit-feedback-container .edit-feedback-card {
+    width: 327px;
+    height: 893px; }
+    .edit-feedback-container .edit-feedback-card .card-container {
+      margin: 25px; }
+    .edit-feedback-container .edit-feedback-card h1 {
+      font-size: 18px; }
+    .edit-feedback-container .edit-feedback-card img {
+      position: relative;
+      transform: translateY(-100%);
+      margin-left: 5%;
+      width: 40px;
+      height: 40px; }
+    .edit-feedback-container .edit-feedback-card .title-container label h4 {
+      font-size: 13px; }
+    .edit-feedback-container .edit-feedback-card .title-container label p {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #647196; }
+    .edit-feedback-container .edit-feedback-card .title-container input {
+      width: 285px; }
+    .edit-feedback-container .edit-feedback-card .category-container {
+      width: 456px;
+      height: 106px;
+      margin-bottom: 24px; }
+      .edit-feedback-container .edit-feedback-card .category-container label h4 {
+        font-size: 13px; }
+      .edit-feedback-container .edit-feedback-card .category-container label p {
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #647196; }
+      .edit-feedback-container .edit-feedback-card .category-container select {
+        width: 285px; }
+    .edit-feedback-container .edit-feedback-card .status-container label h4 {
+      font-size: 13px; }
+    .edit-feedback-container .edit-feedback-card .status-container label p {
+      font-size: 13px;
+      color: #647196; }
+    .edit-feedback-container .edit-feedback-card .status-container select {
+      width: 285px; }
+    .edit-feedback-container .edit-feedback-card .detail-container {
+      width: 285px;
+      height: 154px;
+      margin-bottom: 24px; }
+      .edit-feedback-container .edit-feedback-card .detail-container label h4 {
+        font-size: 13px; }
+      .edit-feedback-container .edit-feedback-card .detail-container label p {
+        font-size: 13px;
+        color: #647196; }
+      .edit-feedback-container .edit-feedback-card .detail-container input {
+        width: 285px;
+        font-size: 13px; }
+    .edit-feedback-container .edit-feedback-card .edit-feedback-footer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+      gap: 1em; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer input:nth-of-type(1) {
+        margin-left: 0; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer button:nth-of-type(2) {
+        margin-left: 0; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer .delete-btn {
+        width: 285px;
+        height: 44px;
+        background-color: #D73737;
+        color: #F2F4FE;
+        border: none;
+        border-radius: 10px; }
+        .edit-feedback-container .edit-feedback-card .edit-feedback-footer .delete-btn:active {
+          background-color: #E98888; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer input {
+        width: 285px;
+        height: 44px;
+        background-color: #3A4374;
+        color: #F2F4FE;
+        border: none;
+        border-radius: 10px; }
+        .edit-feedback-container .edit-feedback-card .edit-feedback-footer input:active {
+          background-color: #656EA3; }
+      .edit-feedback-container .edit-feedback-card .edit-feedback-footer .add-btn {
+        width: 285px;
+        height: 44px;
+        background-color: #AD1FEA;
+        color: #F2F4FE;
+        border: none;
+        border-radius: 10px; }
+        .edit-feedback-container .edit-feedback-card .edit-feedback-footer .add-btn:active {
+          background-color: #C75AF6; } }
+
 .roadmap-main-header {
   grid-area: header; }
 
