@@ -76,7 +76,7 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
-            align-items: center; 
+            // align-items: center; 
 
             .input {
                 position: relative;
@@ -87,7 +87,7 @@
                     left: 0;
                     top: 20px;
                     padding: calc(.5rem * 0.75) calc(.5rem * .5);
-                    margin: calc(.5rem * 0.75 + 3px) calc(.5rem * .5);
+                    margin: calc(-1.5rem * 0.75 + 3px) calc(.5rem * .5);
                     background: white;
                     white-space: nowrap;
                     transform: translate(0, 0);
