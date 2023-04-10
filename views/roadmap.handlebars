@@ -9,25 +9,33 @@
             <a class="add-feedback-link" href="/dashboard/new">+ Add Feedback</a>
         </button>
     </div>
-    <div class="roadmap-planned">
+    <div class="roadmap-nav">
+        <button class="roadmap-planned-tab tab-btn active" data-target="planned">Planned ({{planned.length}})</button>
+        <button class="roadmap-in-progress-tab tab-btn" data-target="in-progress">In-Progress ({{inProgress.length}})</button>
+        <button class="roadmap-live-tab tab-btn" data-target="live">Live ({{live.length}})</button>
+        </div>
+    <hr class="hr">
+    <div class="roadmap-planned tab-content active" data-tab="planned">
         <h2>Planned ({{planned.length}})</h2>
         <p>Ideas prioritized for research</p>
         {{#each planned as |feedback|}}
             {{> planned feedback}}
         {{/each}}
     </div>
-    <div class="roadmap-in-progress">
-        <h2>In-Progress (3)</h2>
+    <div class="roadmap-in-progress tab-content" data-tab="in-progress">
+        <h2>In-Progress ({{inProgress.length}})</h2>
         <p>Currently being developed</p>
         {{#each inProgress as |feedback|}}
             {{> inProgress feedback}}
         {{/each}}
     </div>
-    <div class="roadmap-live">
-        <h2>Live (1)</h2>
+    <div class="roadmap-live tab-content" data-tab="live">
+        <h2>Live ({{live.length}})</h2>
         <p>Released features</p>
         {{#each live as |feedback|}}
             {{> live feedback}}
         {{/each}}
     </div>
 </div>
+
+<script src="/js/navtabs.js"></script>

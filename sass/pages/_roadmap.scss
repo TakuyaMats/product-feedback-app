@@ -113,6 +113,14 @@
             background-color: $color-add-feedback-purple;
         }
     }
+
+    .roadmap-nav {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
 }
 
 @media screen and (max-width: $tablet) {
@@ -127,4 +135,113 @@
             font-size: 14px;
         }
     };
+}
+
+@media screen and (max-width: $mobile) {
+    .roadmap-grid-container {
+        display: block;
+        padding: 0;
+        padding-top: 0;
+    }
+    .roadmap-main-header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        height: 100px;
+        width: 100vw;
+        border-radius: 0;
+
+        .title-container {
+            margin-left: 2em;
+    
+            img {
+                transform: rotate(270deg);
+            }
+    
+            input {
+                text-decoration: none;
+                border: none;
+                background-color: $color-header-blue;
+                font-weight: 700;
+                font-size: 14px;
+                color: $color-white;
+                margin-left: 1em;
+    
+                &:active {
+                    text-decoration: underline;
+                }
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+    
+            h1 {
+                margin-top: 5px;
+                font-size: 18px;
+            }
+        }
+    
+        .add-feedback-btn {
+            width: 134px;
+            height: 40px;
+    
+            a {
+                text-decoration: none;
+                color: $color-white-text;
+            }
+    
+            &:active {
+                background-color: $color-add-feedback-purple;
+            }
+        }
+    }
+    .roadmap-planned,
+    .roadmap-in-progress,
+    .roadmap-live {
+        display: none;
+        margin-left: 2em;
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 13px;
+            color: $color-dark-grey;
+
+        }
+    }
+    .tab-btn.active {
+        color: #000000;
+    }
+    .roadmap-nav {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1em;
+        margin: 1em;
+    }
+    .roadmap-nav button {
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: $color-grey-text;
+        opacity: 0.4;
+        text-decoration: none;
+        padding: 0.5em 1em;
+    }
+    .roadmap-nav button.active {
+        color: $color-black;
+        opacity: 1;
+        border-bottom: 2px solid $color-purple;
+    }
+    hr {
+        display: block;
+        background-color: $color-dark-grey;
+        opacity: 0.5;
+        margin-top: 1em;
+    }
 }

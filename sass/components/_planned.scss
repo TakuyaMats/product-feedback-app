@@ -116,3 +116,10 @@
         }
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .planned-card-container {
+        width: 327px;
+        height: 261px;
+    }
+}
