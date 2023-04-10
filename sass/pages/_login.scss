@@ -279,3 +279,210 @@
         }
     }
 };
+
+@media screen and (max-width: $mobile) {
+    .login-grid-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+        padding-top: 0;
+    };
+    
+    .login-main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 113px;
+        width: 100vw;
+        border-radius: 0;
+    
+        .title-container {
+            margin-left: 2em;
+    
+            img {
+                transform: rotate(270deg);
+            }
+    
+            input {
+                text-decoration: none;
+                border: none;
+                background-color: $color-header-blue;
+                font-weight: 700;
+                font-size: 14px;
+                color: $color-white;
+                margin-left: 1em;
+    
+                &:active {
+                    text-decoration: underline;
+                }
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+    
+            h1 {
+                margin-top: 5px;
+                font-size: 18px;
+            }
+        }
+    };
+    
+    .login-container {
+        grid-area: login;
+        display: flex;
+        background-color: $color-white;
+        width: 327px;
+        height: 411px;
+        border-radius: 10px;
+    
+        .inner-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; 
+        margin: 22px;
+    
+            h1 {
+                margin-bottom: 40px;
+            }
+    
+            .login-form {
+    
+                .input {
+                    position: relative;
+                    margin: 5px;
+                    
+                    &__label {
+                        position: absolute;
+                        left: 0;
+                        top: 20px;
+                        padding: calc(.5rem * 0.75) calc(.5rem * .5);
+                        margin: calc(.5rem * 0.75 + 3px) calc(.5rem * .5);
+                        background: white;
+                        white-space: nowrap;
+                        transform: translate(0, 0);
+                        transform-origin: 0 0;
+                        background: var($color-light);
+                        transition: transform 120ms ease-in;
+                        font-weight: bold;
+                        line-height: 1.2;
+                    }
+    
+                    &__field {
+                        box-sizing: border-box;
+                        display: block;
+                        text-indent: 5%;
+                        width: 285px;
+                        height: 50px;
+                        font-weight: bold;
+                        border: 3px solid currentColor;
+                        padding: calc(.5 * 1.5) .5;
+                        color: currentColor;
+                        background: transparent;
+                        border-radius: 10px;
+                        
+                        &:focus,
+                        &:not(:placeholder-shown) {
+                            & + .input__label {
+                                transform: translate(.25rem, -65%) scale(.8);
+                                color: $color-signal;
+                            }
+                        }
+                    }
+                }
+    
+                .form-group-email {
+                    label {
+                        margin-bottom: 8px;
+                        font-size: 14px;
+                        letter-spacing: -0.2px;
+                        font-weight: bold;
+                    }
+    
+                    input {
+                        width: 356px;
+                        height: 48px;
+                        background-color: $color-off-white;
+                        border: none;
+                        border-radius: 10px;
+                        text-indent: 5%;
+                        margin-bottom: 40px;
+                    }
+                }
+    
+                .form-group-password {
+                    label {
+                        margin-bottom: 8px;
+                        font-size: 14px;
+                        letter-spacing: -0.2px;
+                        font-weight: bold;
+                    }
+    
+                    input {
+                        width: 328px;
+                        height: 48px;
+                        background-color: $color-off-white;
+                        border: none;
+                        border-radius: 10px;
+                        text-indent: 5%;
+                        margin-bottom: 40px;
+                    }
+                }
+    
+                .button-container {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column-reverse;
+                    align-items: center;
+    
+                    a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-weight: 700;
+                    }
+                    
+                    .form-group-login {
+                        button {
+                            width: 279px;
+                            height: 44px;
+                            background-color: $color-purple;
+                            color: $color-cancel-white;
+                            border: none;
+                            border-radius: 10px;
+                            font-size: 14px;
+                            font-weight: 700;
+                            margin-left: 0;
+                            margin-bottom: 20px;
+            
+                            &:active {
+                                background-color: $color-add-feedback-purple;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+
+.signup-container {
+    .signup-form {
+        .form-group-submit {
+            button {
+                width: 285px;
+                height: 40px;
+                margin-top: 2em;
+                margin-left: 0;
+
+                &:active {
+                    background-color: $color-add-feedback-purple;
+                }
+            }
+        }
+    }
+};
+}
