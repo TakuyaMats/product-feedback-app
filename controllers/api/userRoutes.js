@@ -5,15 +5,6 @@ const {
     Comment
 } = require('../../models');
 
-
-// router.get('/signup', (req, res) => {
-//     // if (req.session.logged_in) {
-//     //     res.redirect('/');
-//     //     return;
-//     // }
-//     res.render('signup');
-// });
-
 router.get('/', (req, res) => {
     User.findAll({
             attributes: {
@@ -71,18 +62,18 @@ router.get('/:id', (req, res) => {
 router.post('/signup', async (req, res) => {
     try {
         const userData = await User.create(req.body);
-
-        console.log(userData);
-
+    
         req.session.save(() => {
-            req.session.id = userData.id;
+            req.session.user_id = userData.id;
             req.session.logged_in = true;
-            res.status(200).json(userData);
-        });
+            res.status(200).json({ user_id: userData.id });
+            console.log(userData);
+    });
     } catch (err) {
         res.status(400).json(err);
     }
 });
+
 
 router.post('/login', async (req, res) => {
     try {
@@ -181,7 +172,5 @@ router.delete('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
-
-// make a post for my sign up page. 
 
 module.exports = router;

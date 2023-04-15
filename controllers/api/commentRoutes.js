@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment } = require('../../models')
+const { Comment, User } = require('../../models')
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
@@ -24,18 +24,17 @@ router.get('/:id', (req, res) => {
         })
 });
 
-router.post('/', withAuth, (req, res) => {
-    if (req.session) {
-        Comment.create({
-                content: req.body.content,
-                feedback_id: req.body.feedback_id,
-                user_id: req.session.user_id,
-            })
-            .then(commentData => res.json(commentData))
-            .catch(err => {
-                console.log(err);
-                res.status(400).json(err);
-            })
+router.post('/', withAuth, async (req, res) => {
+    try {
+        const comment = await Comment.create({
+            content: req.body.content,
+            feedback_id: req.body.feedback_id,
+            user_id: req.session.user_id
+        });
+
+        res.status(200).json(comment);
+    } catch (err) {
+        res.status(400).json(err);
     }
 });
 

@@ -10,14 +10,14 @@ router.get('/', (req, res) => {
             ],
             include: [{
                     model: User,
-                    attributes: ['username', 'name']
+                    attributes: ['id', 'username', 'name']
                 },
                 {
                     model: Comment,
                     attributes: ['id', 'content', 'feedback_id', 'user_id', 'reply_id'],
                     include: [{
                         model: User,
-                        attributes: ['username', 'name'],
+                        attributes: ['id', 'username', 'name'],
                     },{
                         model: Reply,
                         attributes: ['content', 'replyingTo']
@@ -40,13 +40,13 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'title', 'category', 'upvotes', 'status', 'description'],
         include: [{
             model: User,
-            attributes: ['username', 'name', 'email']
+            attributes: ['id', 'username', 'name', 'email']
         }, {
             model: Comment,
             attributes: ['id', 'content', 'feedback_id', 'user_id', 'reply_id'],
             include: [{
                 model: User,
-                attributes: ['username', 'name', 'email'],
+                attributes: ['id', 'username', 'name', 'email'],
             }, {
                 model: Reply,
                 attributes: ['content', 'replyingTo']
@@ -84,18 +84,6 @@ router.post('/', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
-
-// router.put('/:id/upvote', withAuth, (req, res) => {
-//     const { upvotes } = req.body.upvotes;
-//     const { id } = req.params.id;
-
-//     Feedback.update({ upvotes }, { where: { id } })
-//         .then(() => res.json({ success: true }))
-//         .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//         });
-// });
 
 router.put('/:id/upvote', withAuth, (req, res) => {
     Feedback.update({
