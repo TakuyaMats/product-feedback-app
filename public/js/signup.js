@@ -3,49 +3,30 @@ const signupFormHandler = async (event) => {
 
     const form = document.querySelector('#signup-form');
     const name = form.querySelector('#name-signup').value.trim();
-    const photo = form.querySelector('#photo-signup');
+    const photo = form.querySelector('#photo-signup').files[0]; // Get the first file selected in the input
     const username = form.querySelector('#username-signup').value.trim();
     const email = form.querySelector('#email-signup').value.trim();
     const password = form.querySelector('#password-signup').value.trim();
 
     if (name && photo && username && email && password) {
-        const response = await fetch('/api/users/signup', {
-            method: 'POST',
-            body: JSON.stringify({
-                name,
-                username,
-                email,
-                password
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        });
+        const formData = new FormData(); // Create a new FormData object
+        formData.append('name', name);
+        formData.append('photo', photo);
+        formData.append('username', username);
+        formData.append('email', email);
+        formData.append('password', password);
 
-        if (response.ok) {
-            document.location.replace('/');
-        } else {
-            alert(response.statusText);
-        }
+        const xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
+        xhr.open('POST', '/api/users/signup'); // Specify the endpoint to handle the form data
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                document.location.replace('/');
+            } else {
+                alert(xhr.statusText);
+            }
+        };
+        xhr.send(formData); // Send the form data to the server
     }
 };
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
-
-document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
-
-    var formData = new FormData(this); // Create FormData object from form data
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/upload'); // URL to handle the file upload
-
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-        // Handle successful upload
-        } else {
-        // Handle upload error
-        }
-    };
-
-    xhr.send(formData);
-});
+document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);

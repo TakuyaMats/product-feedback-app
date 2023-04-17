@@ -179,8 +179,6 @@ router.get('/sortBy/:column/:sortDirection', (req, res) => {
     });
 });
 
-
-// reverse? include model Reply and include Comment?
 router.get('/feedback/:id', (req, res) => {
     Feedback.findOne({
             where: {
@@ -220,7 +218,6 @@ router.get('/feedback/:id', (req, res) => {
                 feedback.comments.user_id = -1; // set default value for user_id
                 feedback.comments.user = { username: 'anonymous' }; // set default value for user
             }
-            console.log(feedback);
             res.render('single-feedback', { feedback, logged_in: req.session.logged_in });
         })
         .catch(err => {

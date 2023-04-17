@@ -84,8 +84,4 @@ router.get('/new', (req, res) => {
     res.render('new-feedback');
 });
 
-// router.get('/edit', (req, res) => {
-//     res.render('edit-feedback');
-// });
-
 module.exports = router;

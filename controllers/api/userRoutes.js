@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const multer = require('multer');
+const path = require('path');
 const {
     User,
     Feedback,
@@ -59,21 +61,63 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/signup', async (req, res) => {
-    try {
-        const userData = await User.create(req.body);
-    
-        req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.logged_in = true;
-            res.status(200).json({ user_id: userData.id });
-            console.log(userData);
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/css/user-images')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname)
+    }
+})
+
+const fileFilter = function (req, file, cb) {
+    if (file.fieldname === 'photo') {
+        cb(null, true)
+    } else {
+        cb(new Error('Unexpected field'))
+    }
+}
+
+const upload = multer({ storage: storage, fileFilter: fileFilter })
+
+function uploadMiddleware(req, res, next) {
+    upload.single('photo')(req, res, function(err) {
+        if (err) {
+            console.log(err);
+            res.status(400).json(err);
+        } else {
+            next();
+        }
     });
+}
+
+router.post('/signup', uploadMiddleware, async (req, res) => {
+    try {
+        if (!req.file) {
+            return res.status(400).json({ message: 'Photo is required' });
+        }
+        
+        const userData = {
+            name: req.body.name,
+            photo: '/css/user-images/' + req.file.filename,
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password
+        };
+
+        const newUser = await User.create(userData);
+        req.session.save(() => {
+            req.session.user_id = newUser.id;
+            req.session.user = newUser;
+            req.session.logged_in = true;
+            console.log(newUser)
+            res.redirect('/');
+        });
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });
-
 
 router.post('/login', async (req, res) => {
     try {
