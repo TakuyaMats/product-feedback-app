@@ -4,9 +4,11 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const uri = process.env.URI
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,6 +25,26 @@ const sess = {
         db: sequelize
     })
 };
+
+const client = new MongoClient(uri, {
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true,
+    }
+});
+
+async function run() {
+    try {
+        await client.connect();
+        await client.db("admin").command({ ping: 1 });
+        console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    } finally {
+        await client.close();
+    }
+}
+run().catch(console.dir);
+
 
 app.use(session(sess))
 app.engine('handlebars', hbs.engine);
