@@ -1,1 +1,0 @@
-{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"marstravelDB.sessions"},{"v":{"$numberInt":"2"},"key":{"expires":{"$numberInt":"1"}},"name":"expires_1","ns":"marstravelDB.sessions","expireAfterSeconds":{"$numberInt":"0"}}],"uuid":"07cc0ba214614d4191c4c36ff89cd3ca","collectionName":"sessions","type":"collection"}
