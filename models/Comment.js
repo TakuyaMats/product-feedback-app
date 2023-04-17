@@ -22,13 +22,6 @@ Comment.init({
             key: 'id'
         }
     },
-    // reply_ids: {
-    //     type: DataTypes.INTEGER,
-    //     reference: {
-    //         model: 'reply',
-    //         key: 'id'
-    //     }
-    // },
     user_id: {
         type: DataTypes.INTEGER,
         reference: {

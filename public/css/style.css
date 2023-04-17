@@ -125,7 +125,7 @@ body {
 
 @media screen and (max-width: 1061px) {
   .main__sidebar-category {
-    margin-bottom: 20px; } }
+    margin-bottom: 0; } }
 
 @media screen and (max-width: 480px) {
   .main__sidebar-category {

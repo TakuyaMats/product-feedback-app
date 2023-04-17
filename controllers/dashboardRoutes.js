@@ -26,7 +26,6 @@ router.get('/', withAuth, (req, res) => {
             const feedbacks = feedbackData.map(feedback => feedback.get({
                 plain: true
             }));
-            // /dashboard/new?
             res.render('dashboard', {
                 feedbacks,
                 logged_in: true

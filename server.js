@@ -4,7 +4,6 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-// const feedbackHelper = require('./utils/feedback');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -35,7 +34,6 @@ app.use(express.urlencoded({
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static(__dirname + '/public'));
 
 app.use(routes);
 
