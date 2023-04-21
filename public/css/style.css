@@ -293,7 +293,7 @@ body {
       border: none; } }
 
 .card-feedback {
-  height: 151px;
+  height: 171px;
   background-color: #FFFFFF;
   margin-top: 1em;
   display: flex;
@@ -319,6 +319,7 @@ body {
     margin-left: 32px;
     margin-right: 40px;
     width: 40px;
+    min-width: 40px;
     height: 53px;
     border-radius: 10px;
     background-color: #d3d5d7; }
@@ -825,7 +826,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas: 'sidebar header header header header' 'sidebar feedback feedback feedback feedback';
-  gap: 10px;
+  gap: 15px;
   padding: 10px;
   padding-top: 40px; }
 
@@ -906,7 +907,8 @@ body {
         width: 134px; } }
 
 .detail-feedback {
-  grid-area: feedback; }
+  grid-area: feedback;
+  width: 730px; }
 
 .feedback-detail-container {
   display: grid;
@@ -1001,6 +1003,9 @@ body {
           background-color: #C75AF6; }
 
 @media screen and (max-width: 480px) {
+  .detail-feedback {
+    grid-area: feedback;
+    width: 0; }
   .feedback-detail-container {
     display: grid;
     justify-content: revert;

@@ -1,4 +1,4 @@
-.detail-feedback { grid-area: feedback;};
+.detail-feedback { grid-area: feedback; width: 730px;};
 
 .feedback-detail-container {
     display: grid;
@@ -135,6 +135,8 @@
 }
 
 @media screen and (max-width: $mobile) {
+    .detail-feedback { grid-area: feedback; width: 0;};
+
     .feedback-detail-container {
         display: grid;
         justify-content: revert;
